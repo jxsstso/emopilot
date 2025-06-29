@@ -4,19 +4,61 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Emopilot – 감정 여정을 함께합니다</title>
-  <link rel="stylesheet" href="/emopilot/style.css" />
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: white;
+      color: #222;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    #lang-switcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    header {
+      text-align: center;
+      padding-top: 80px;
+    }
+    nav {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1rem;
+    }
+    section {
+      max-width: 600px;
+      margin: 50px auto;
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    footer {
+      text-align: center;
+      margin-top: 100px;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
-  <div id="lang-switcher" style="position: absolute; top: 20px; right: 20px;">
+  <div id="lang-switcher">
     <a href="/emopilot/en/index.html">EN</a>
   </div>
 
-  <header style="text-align: center; padding-top: 80px;">
+  <header>
     <h1>EmoPilot에 오신 것을 환영합니다</h1>
     <p>감정을 돌아보고, 스스로를 돌보는 안전한 공간</p>
   </header>
 
-  <nav style="text-align: center; margin-top: 40px;">
+  <nav>
     <a href="/emopilot/ko/behind.html">앱의 철학</a> |
     <a href="/emopilot/ko/privacy.html">개인정보 처리방침</a> |
     <a href="/emopilot/ko/terms.html">이용 약관</a> |
@@ -24,7 +66,7 @@
     <a href="/emopilot/ko/contact.html">문의하기</a> 
   </nav>
 
-  <section style="max-width: 600px; margin: 50px auto; text-align: center;">
+  <section>
     <h2>앱 소개</h2>
     <p>
       Emopilot은 감정을 기록하고, 돌아보고, AI 조언을 받을 수 있는 감정 반영 도구입니다.<br />
@@ -32,7 +74,7 @@
     </p>
   </section>
 
-  <footer style="text-align: center; margin-top: 100px; font-size: 0.9em; color: #777;">
+  <footer>
     &copy; 2025 EmoPilot. All rights reserved.
   </footer>
 </body>
