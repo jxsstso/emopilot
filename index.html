@@ -3,26 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome – Emopilot</title>
+  <title>Redirecting...</title>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=/en/index.html" />
+  </noscript>
   <script>
-    // 언어 자동 감지
-    const lang = navigator.language || navigator.userLanguage;
-    if (lang.startsWith("ko")) {
-      window.location.href = "/ko/index.html";
-    } else {
-      window.location.href = "/en/index.html";
-    }
+    document.addEventListener("DOMContentLoaded", function () {
+      const lang = navigator.language || navigator.userLanguage;
+      if (lang.startsWith("ko")) {
+        window.location.replace("/ko/index.html");
+      } else {
+        window.location.replace("/en/index.html");
+      }
+    });
   </script>
-  <style>
-    body { font-family: sans-serif; text-align: center; padding-top: 100px; }
-    .lang-button { margin: 20px; font-size: 1.2em; }
-  </style>
 </head>
 <body>
-  <h1>Choose your language / 언어를 선택하세요</h1>
-  <div>
-    <a class="lang-button" href="/en/index.html">🇺🇸 English</a>
-    <a class="lang-button" href="/ko/index.html">🇰🇷 한국어</a>
-  </div>
+  <p>Redirecting... If you are not redirected, <a href="/en/index.html">click here</a>.</p>
 </body>
 </html>
