@@ -1,4 +1,4 @@
-o<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,44 +7,49 @@ o<!DOCTYPE html>
   <link rel="stylesheet" href="/emopilot/style.css" />
 </head>
 <body>
+
   <!-- 언어 선택 버튼 -->
   <div id="lang-switcher" style="position: absolute; top: 20px; right: 20px;">
     <a href="/emopilot/en/index.html">EN</a> | <a href="/emopilot/ko/index.html">KO</a>
   </div>
 
-  <!-- 메인 컨텐츠 -->
-  <header style="text-align: center; padding-top: 80px;">
+  <!-- 메인 콘텐츠 -->
+  <main style="max-width: 800px; margin: 100px auto; padding: 0 20px; text-align: center;">
+
     <h1>Welcome to EmoPilot</h1>
-    <p>Your safe space for emotional reflection and guidance.</p>
-  </header>
+    <p class="subtitle">Your safe space for emotional reflection and guidance.</p>
 
-  <!-- 내비게이션 -->
-  <nav style="text-align: center; margin-top: 40px;">
-    <a href="/emopilot/en/behind.html">Behind this App</a> |
-    <a href="/emopilot/en/privacy.html">Privacy Policy</a> |
-    <a href="/emopilot/en/terms.html">Terms of Use</a> |
-    <a href="/emopilot/en/faq.html">FAQ</a> |
-    <a href="/emopilot/en/contact.html">Contact</a>
-  </nav>
+    <!-- 본문 내 메뉴 -->
+    <nav style="margin: 40px 0;">
+      <a href="/emopilot/en/behind.html" class="nav-link">Behind This App</a> |
+      <a href="/emopilot/en/privacy.html" class="nav-link">Privacy Policy</a> |
+      <a href="/emopilot/en/terms.html" class="nav-link">Terms of Use</a> |
+      <a href="/emopilot/en/faq.html" class="nav-link">FAQ</a> |
+      <a href="/emopilot/en/contact.html" class="nav-link">Contact</a>
+    </nav>
 
-  <!-- 앱 소개 -->
-  <section style="max-width: 600px; margin: 50px auto; text-align: center;">
-    <h2>About the App</h2>
-    <p>
-      Emopilot helps you record your emotions, understand patterns, and get AI-generated advice tailored to your emotional state.  
-      It's a reflection tool that supports your mental well-being with insights and coping strategies.
-    </p>
-    <p>
-      The app is currently available on the App Store. Start your journey toward better emotional awareness today.
-    </p>
-    <!-- 다운로드 버튼 (필요시) -->
-    <p style="margin-top: 30px;">
-      <a href="#" style="padding: 10px 20px; background-color: #007acc; color: white; text-decoration: none; border-radius: 5px;">Download on App Store</a>
-    </p>
-  </section>
+    <!-- 앱 소개 -->
+    <section>
+      <h2>About the App</h2>
+      <p>
+        Emopilot helps you record your emotions, understand patterns, and get AI-generated advice tailored to your emotional state.
+        It's a reflection tool that supports your mental well-being with insights and coping strategies.
+      </p>
+      <p>
+        The app is currently available on the App Store. Start your journey toward better emotional awareness today.
+      </p>
 
-  <footer style="text-align: center; margin-top: 100px; font-size: 0.9em; color: #777;">
-    &copy; 2025 EmoPilot. All rights reserved.
-  </footer>
+      <!-- 다운로드 버튼 -->
+      <p style="margin-top: 30px;">
+        <a href="#" class="download-button">Download on App Store</a>
+      </p>
+    </section>
+
+    <!-- 푸터 -->
+    <footer style="margin-top: 100px; font-size: 0.9em; color: #777;">
+      &copy; 2025 EmoPilot. All rights reserved.
+    </footer>
+  </main>
+
 </body>
 </html>
