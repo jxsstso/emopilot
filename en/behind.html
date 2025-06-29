@@ -7,17 +7,9 @@
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
-    <!-- 메뉴 로드용 placeholder -->
-  <div id="nav-placeholder"></div>
-  
-  <!-- 메뉴 삽입 스크립트 -->
-  <script>
-    fetch("nav.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("nav-placeholder").innerHTML = data;
-      });
-  </script>
+  <div style="display: flex; min-height: 100vh;">
+    <!-- ✅ 메뉴 (왼쪽) -->
+  <div id="nav-placeholder" style="width: 220px; background-color: #f5f5f5; border-right: 1px solid #ddd; padding: 20px;"></div>
 
   <div id="lang-switcher" style="position: absolute; top: 20px; right: 20px;">
     <a href="/emopilot/ko/behind.html">KO</a>
@@ -74,5 +66,13 @@
       © 2025 EmoPilot. All rights reserved.
     </footer>
   </main>
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+      });
+  </script>
+    
 </body>
 </html>
