@@ -76,13 +76,19 @@
       </footer>
     </main>
   </div>
-
-  <!-- Load left navigation via script -->
-  <script>
-    fetch("/emopilot/en/nav.html")
+   <script>
+    fetch("nav.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("nav-placeholder").innerHTML = data;
+  
+        // 여기서 처리해야 nav.html이 로드된 후 클래스 적용 가능
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
       });
   </script>
 </body>
