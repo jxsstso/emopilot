@@ -72,6 +72,11 @@ a:hover {
   text-decoration: underline;
 }
 
+nav a.active {
+  font-weight: bold;
+  color: #333;
+}
+
 /* 인용문 */
 blockquote {
   border-left: 4px solid #ccc;
