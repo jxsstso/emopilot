@@ -1,66 +1,91 @@
-/* 기본 레이아웃 */
+/* 기본 스타일 초기화 */
 body {
+  font-family: "Helvetica Neue", sans-serif;
   margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
+  padding: 0;
+  background-color: #fff;
   color: #333;
 }
 
-/* Flex 컨테이너: 좌측 메뉴 + 우측 본문 */
+/* 언어 전환 버튼 */
+#lang-switcher {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+#lang-switcher a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+#lang-switcher a:hover {
+  color: #007acc;
+  text-decoration: underline;
+}
+
+/* 전체 레이아웃: 왼쪽 메뉴 + 오른쪽 본문 */
 .layout {
   display: flex;
   min-height: 100vh;
 }
 
-/* 왼쪽 메뉴 영역 */
+/* 왼쪽 메뉴 */
 .sidebar {
   width: 220px;
-  background-color: #f5f5f5;
-  border-right: 1px solid #ddd;
+  background-color: #f8f8f8;
   padding: 30px 20px;
-  box-sizing: border-box;
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.05);
 }
 
-/* 오른쪽 본문 영역 */
+/* 본문 영역 */
 .content {
   flex: 1;
-  padding: 40px;
-  box-sizing: border-box;
+  padding: 60px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.8;
 }
 
-/* 메뉴 링크 스타일 */
-.sidebar nav {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+/* 제목 스타일 */
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.6em;
 }
 
-.sidebar a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  padding: 6px 0;
-  transition: color 0.2s;
+h2 {
+  font-size: 1.4em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
 }
 
-.sidebar a:hover {
+/* 본문 링크 */
+a {
   color: #007acc;
+  text-decoration: none;
+}
+
+a:hover {
   text-decoration: underline;
 }
 
-/* 본문 타이틀 */
-h1 {
-  margin-top: 0;
+/* 인용문 스타일 */
+blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 16px;
+  margin-left: 0;
+  color: #555;
+  font-style: italic;
+  background-color: #f9f9f9;
 }
 
-/* 반응형 보완 (선택사항) */
-@media (max-width: 768px) {
-  .layout {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-    border-right: none;
-    border-bottom: 1px solid #ddd;
-  }
+/* 푸터 스타일 */
+footer {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 0.9em;
+  color: #999;
 }
