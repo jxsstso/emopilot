@@ -4,63 +4,79 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Subscription & Usage Guide – Emopilot</title>
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="/emopilot/style.css" />
 </head>
 <body>
-  <div id="lang-switcher" style="position: absolute; top: 20px; right: 20px;">
-    <a href="/emopilot/ko/subscription.html">KO</a>
+  <div style="display: flex; min-height: 100vh;">
+    <!-- Left navigation -->
+    <div id="nav-placeholder" style="width: 220px; background-color: #f5f5f5; border-right: 1px solid #ddd; padding: 20px;"></div>
+
+    <!-- Language Switcher -->
+    <div id="lang-switcher" style="position: absolute; top: 20px; right: 20px;">
+      <a href="/emopilot/ko/subscription.html">KO</a>
+    </div>
+
+    <!-- Main Content -->
+    <main style="max-width: 800px; margin: 80px auto; padding: 0 20px; line-height: 1.8;">
+      <h1>Subscription & Usage Guide</h1>
+
+      <section>
+        <h2>📌 Free Trial</h2>
+        <ul>
+          <li>New users can try the app for free for 24 hours after installation.</li>
+          <li>During this trial period, the <strong>“Get Advice”</strong> feature can be used up to <strong>2 times</strong>.</li>
+          <li>Before starting, you must review and agree to the Privacy Policy and Terms of Use by tapping <strong>“Agree”</strong> and then <strong>“Free Use”</strong>.</li>
+          <li>By tapping the button, you are considered to have agreed to the terms above.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>💳 Subscription Details</h2>
+        <ul>
+          <li>After the 24-hour free period, you will need to subscribe to continue using the app.</li>
+          <li>Tapping <strong>“Subscribe”</strong> and completing payment will activate your subscription and start <strong>monthly auto-renewal billing</strong>.</li>
+          <li>You may cancel your subscription anytime via the <strong>“Account Info &gt; Cancel Subscription”</strong> menu.</li>
+          <li>Subscribers can use the “Get Advice” feature up to <strong>3 times per day</strong>, and <strong>60 times per month</strong>.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>⚠️ AI Policy Violations</h2>
+        <ul>
+          <li>If your input contains content that violates our AI usage policy, a warning will be shown and <strong>one usage will still be counted</strong>.</li>
+          <li>Examples include: hate speech, threats, offensive or inappropriate language.</li>
+          <li>Repeated violations may result in further warnings or <strong>temporary restrictions on access</strong>.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🚀 After Subscribing</h2>
+        <ul>
+          <li>After completing your subscription, please fully close and reopen the app to begin using your subscription features.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>✅ Consent</h2>
+        <p>
+          By tapping <strong>“Agree”</strong> and selecting either <strong>“Free Use”</strong> or <strong>“Subscribe”</strong>,  
+          you are confirming that you agree to all of the terms outlined above.
+        </p>
+      </section>
+
+      <footer style="text-align: center; margin-top: 60px; font-size: 0.9em; color: #777;">
+        © 2025 EmoPilot. All rights reserved.
+      </footer>
+    </main>
   </div>
 
-  <main style="max-width: 800px; margin: 80px auto; padding: 0 20px; line-height: 1.8;">
-    <h1>Subscription & Usage Guide</h1>
-
-    <section>
-      <h2>📌 Free Trial</h2>
-      <ul>
-        <li>New users can try the app for free for 24 hours after installation.</li>
-        <li>During this trial period, the <strong>“Get Advice”</strong> feature can be used up to <strong>2 times</strong>.</li>
-        <li>Before starting, you must review and agree to the Privacy Policy and Terms of Use by tapping <strong>“Agree”</strong> and then <strong>“Free Use”</strong>.</li>
-        <li>By tapping the button, you are considered to have agreed to the terms above.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>💳 Subscription Details</h2>
-      <ul>
-        <li>After the 24-hour free period, you will need to subscribe to continue using the app.</li>
-        <li>Tapping <strong>“Subscribe”</strong> and completing payment will activate your subscription and start <strong>monthly auto-renewal billing</strong>.</li>
-        <li>You may cancel your subscription anytime via the <strong>“Account Info &gt; Cancel Subscription”</strong> menu.</li>
-        <li>Subscribers can use the “Get Advice” feature up to <strong>3 times per day</strong>, and <strong>60 times per month</strong>.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>⚠️ AI Policy Violations</h2>
-      <ul>
-        <li>If your input contains content that violates our AI usage policy, a warning will be shown and <strong>one usage will still be counted</strong>.</li>
-        <li>Examples include: hate speech, threats, offensive or inappropriate language.</li>
-        <li>Repeated violations may result in further warnings or <strong>temporary restrictions on access</strong>.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>🚀 After Subscribing</h2>
-      <ul>
-        <li>After completing your subscription, please fully close and reopen the app to begin using your subscription features.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>✅ Consent</h2>
-      <p>
-        By tapping <strong>“Agree”</strong> and selecting either <strong>“Free Use”</strong> or <strong>“Subscribe”</strong>,  
-        you are confirming that you agree to all of the terms outlined above.
-      </p>
-    </section>
-
-    <footer style="text-align: center; margin-top: 60px; font-size: 0.9em; color: #777;">
-      © 2025 EmoPilot. All rights reserved.
-    </footer>
-  </main>
+  <!-- Navigation loader -->
+  <script>
+    fetch("/emopilot/en/nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+      });
+  </script>
 </body>
 </html>
