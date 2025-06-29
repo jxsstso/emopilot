@@ -73,6 +73,14 @@
         document.getElementById("nav-placeholder").innerHTML = data;
       });
   </script>
-    
+  <script>
+  // 현재 URL의 path와 일치하는 nav 링크에 active 클래스 추가
+  const currentPath = window.location.pathname;
+  document.querySelectorAll('nav a').forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active');
+    }
+  });
+</script>    
 </body>
 </html>
