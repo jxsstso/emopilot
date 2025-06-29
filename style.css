@@ -7,7 +7,7 @@ body {
   color: #333;
 }
 
-/* 언어 전환 버튼 */
+/* 언어 전환 버튼 (오른쪽 위 고정) */
 #lang-switcher {
   position: absolute;
   top: 20px;
@@ -33,7 +33,7 @@ body {
   min-height: 100vh;
 }
 
-/* 왼쪽 메뉴 */
+/* 왼쪽 메뉴 스타일 */
 .sidebar {
   width: 220px;
   background-color: #f8f8f8;
@@ -41,7 +41,7 @@ body {
   box-shadow: 1px 0 5px rgba(0, 0, 0, 0.05);
 }
 
-/* 본문 영역 */
+/* 오른쪽 본문 스타일 */
 .content {
   flex: 1;
   padding: 60px 40px;
@@ -50,7 +50,7 @@ body {
   line-height: 1.8;
 }
 
-/* 제목 스타일 */
+/* 제목 */
 h1 {
   font-size: 2em;
   margin-bottom: 0.6em;
@@ -62,7 +62,7 @@ h2 {
   margin-bottom: 0.5em;
 }
 
-/* 본문 링크 */
+/* 링크 스타일 */
 a {
   color: #007acc;
   text-decoration: none;
@@ -72,7 +72,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* 인용문 스타일 */
+/* 인용문 */
 blockquote {
   border-left: 4px solid #ccc;
   padding-left: 16px;
@@ -82,7 +82,7 @@ blockquote {
   background-color: #f9f9f9;
 }
 
-/* 푸터 스타일 */
+/* 푸터 */
 footer {
   text-align: center;
   margin-top: 80px;
