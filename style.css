@@ -1,32 +1,41 @@
-/* Reset and layout */
+/* 전체 페이지 기본 설정 */
 html, body {
-  height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #0d1b2a; /* 전체 배경색 navy tone */
+  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-  color: #f0f0f0; /* 본문 글자색 */
+  background-color: #0d1b2a; /* 전체 바탕 navy */
+  color: #ffffff;
 }
 
-/* Wrapper to align nav and main side by side */
+/* 페이지 전체를 감싸는 컨테이너 */
 body > div {
-  height: 100%;
-  display: flex;
   margin: 0;
   padding: 0;
+  display: flex;
+  min-height: 100vh;
+  background-color: #0d1b2a;
 }
 
-/* Navigation */
+/* 언어 전환 버튼 */
+#lang-switcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 14px;
+}
+
+/* 사이드바 메뉴(nav) */
 nav {
   width: 220px;
-  background-color: #0d1b2a; /* nav 배경색 본문과 동일하게 */
+  background-color: #11141e; /* 어두운 회색/navy와 조화 */
   padding: 20px;
   box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  border: none;
+  display: flex;
+  flex-direction: column;
 }
 
+/* nav 안 텍스트/링크 스타일 */
 nav h2 {
   font-size: 18px;
   margin-bottom: 10px;
@@ -44,28 +53,22 @@ nav li {
   align-items: center;
 }
 
-nav li img {
-  width: 20px;
-  height: 20px;
-  margin-right: 8px;
-}
-
 .nav-link {
   text-decoration: none;
-  color: #f0f0f0;
+  color: #e0e0e0;
   font-size: 15px;
 }
 
 .nav-link:hover {
-  color: #ffcc00; /* hover 시 yellow tone 강조 */
+  color: #fcd34d; /* yellow on hover */
 }
 
 .nav-link.active {
   font-weight: bold;
-  color: #ffcc00; /* active 강조 색상 */
+  color: #fcd34d; /* 강조 색상 */
 }
 
-/* Main content area */
+/* 본문 영역 */
 main {
   flex-grow: 1;
   padding: 60px 40px;
@@ -75,27 +78,24 @@ main {
   line-height: 1.8;
 }
 
-/* Language switcher */
-#lang-switcher {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 14px;
+/* 제목 텍스트 */
+h1, h2, h3 {
+  color: #fcd34d; /* yellow */
 }
 
-/* Footer */
+/* 푸터 스타일 */
 footer {
   text-align: center;
   padding: 40px 0;
   font-size: 14px;
-  color: #999;
-  background-color: transparent; /* ✅ 배경 박스 제거 */
+  color: #aaa;
+  background-color: transparent; /* 박스 제거 */
   margin-top: 80px;
-  border-top: 1px solid #333;
+  border-top: 1px solid #222;
 }
 
 footer a {
-  color: #ffcc00;
+  color: #fcd34d;
   text-decoration: none;
 }
 
