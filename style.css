@@ -1,59 +1,75 @@
+/* 전체 배경 및 기본 텍스트 스타일 */
 body {
   margin: 0;
-  font-family: "Apple SD Gothic Neo", sans-serif;
+  padding: 0;
   background-color: #0d1b2a;
-  color: #e0e0e0;
+  color: #ffffff;
+  font-family: 'Apple SD Gothic Neo', sans-serif;
 }
 
+/* 전체 컨테이너: 좌우 레이아웃 */
 .container {
   display: flex;
   min-height: 100vh;
 }
 
-#nav-placeholder nav {
+/* 네비게이션 영역 */
+nav {
   width: 220px;
-  background-color: #0d1b2a; /* 본문과 같은 색상으로 맞춤 */
+  background-color: #0b1622;
   padding: 20px;
   box-sizing: border-box;
 }
 
-#nav-placeholder nav ul {
+nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-#nav-placeholder nav li {
-  margin-bottom: 15px;
+nav li {
+  margin-bottom: 14px;
 }
 
-#nav-placeholder nav a {
+nav a {
   color: #ccc;
   text-decoration: none;
-  font-weight: 500;
+  font-size: 15px;
   display: block;
-  transition: color 0.3s;
+  transition: color 0.2s;
 }
 
-#nav-placeholder nav a.active {
-  color: #f9c74f;
+nav a:hover {
+  color: #fff;
+}
+
+nav a.active {
+  color: #ffcc00;
   font-weight: bold;
 }
 
+/* 본문 콘텐츠 */
 .content {
-  flex: 1;
   max-width: 800px;
-  margin: 100px auto;
+  margin: 80px auto 60px auto;
   padding: 0 20px;
   line-height: 1.8;
+  flex-grow: 1;
 }
 
+/* 제목 색상 */
 .content h1 {
-  color: #f9c74f; /* 제목 노란색 */
-  font-size: 2em;
-  margin-bottom: 20px;
+  color: #ffcc00;
 }
 
+/* 인용문 스타일 */
+blockquote {
+  font-style: italic;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+/* 언어 전환 버튼 위치 */
 #lang-switcher {
   position: absolute;
   top: 20px;
@@ -61,20 +77,30 @@ body {
 }
 
 #lang-switcher a {
-  color: #f9c74f;
+  color: #ffcc00;
   text-decoration: none;
   font-weight: bold;
 }
 
-blockquote {
-  font-style: italic;
-  margin: 20px 0 40px;
-  color: #ccc;
+/* 푸터와 분리선 */
+.footer-separator {
+  border: none;
+  border-top: 1px solid #888;
+  margin-top: 60px;
+  margin-bottom: 20px;
 }
 
-footer {
+.footer {
   text-align: center;
-  padding: 40px 0;
-  color: #888;
   font-size: 0.9em;
+  color: #aaa;
+}
+
+.footer-link {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
 }
