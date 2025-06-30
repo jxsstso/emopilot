@@ -68,6 +68,10 @@ nav li img {
   min-height: 100vh;
 }
 
+.center-title {
+  text-align: center;
+}
+
 .content {
   flex-grow: 1;
   padding: 60px 40px;
