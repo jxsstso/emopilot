@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ – Emopilot</title>
+  <link rel="stylesheet" href="/emopilot/style.css" />
+</head>
+<body>
+  <div style="display: flex; min-height: 100vh;">
+    <!-- ✅ Sidebar navigation -->
+    <div id="nav-placeholder" style="width: 220px; background-color: #f5f5f5; border-right: 1px solid #ddd; padding: 20px;"></div>
+
+    <!-- Language switch -->
+    <div id="lang-switcher" style="position: absolute; top: 20px; right: 20px;">
+      <a href="/emopilot/faq.html">KO</a>
+    </div>
+
+    <!-- Main content -->
+    <main style="max-width: 800px; margin: 100px auto; padding: 0 20px; line-height: 1.8;">
+      <h1>Frequently Asked Questions (FAQ)</h1>
+
+      <h3>1. What do I need to start using the app?</h3>
+      <p>EmoPilot uses iCloud to securely store your emotion records. Therefore, you need to be logged into your iCloud account and have an active internet connection to connect with the app server.</p>
+
+      <h3>2. How long can I use the app for free, and are there any feature limitations?</h3>
+      <p>The free usage period is 24 hours from the time you install the app. During this time, most features are fully available, except the AI advice function, which is limited to 2 times.</p>
+
+      <h3>3. As a subscriber, how often can I use the app and receive AI advice?</h3>
+      <p>You can use all core features—such as emotion recording, editing, and statistics—without any limits. The AI advice function, however, is limited to 3 times per day and up to 60 times per month.</p>
+
+      <h3>4. How can I cancel my subscription or request a refund?</h3>
+      <p>You can cancel or request a refund through the in-app menu: 'Info → Manage Subscription'. EmoPilot follows Apple’s subscription and refund policy. For more details, please refer to Apple’s support page.</p>
+
+      <h3>5. How were the emotion and coping lists created?</h3>
+      <p>The emotion and coping method lists in EmoPilot are not based on strict medical guidelines but are inspired by psychological theories and real user experiences. They are designed to help users explore and define their own emotional strategies. All items can be freely added or removed by users to build a personalized experience.</p>
+
+      <h3>6. What languages does the app support? Will more be added?</h3>
+      <p>The app currently supports Korean and English. We plan to add more languages in the future, and updates will be announced on our official website.</p>
+
+      <h3>7. What AI system is used? Does it store my emotions or text?</h3>
+      <p>The AI advice feature is powered by OpenAI's ChatGPT 3.5. Your input is encrypted and transmitted securely, and it is not stored on the server beyond what’s required for processing. For more details, please refer to our privacy policy.</p>
+
+      <h3>8. Are there any restrictions on AI usage?</h3>
+      <p>Input that includes violent, hateful, or sexually explicit content is restricted under OpenAI’s content policy. Repeated violations may result in usage limits. To ensure safety, input is filtered and monitored internally.</p>
+
+      <h3>9. Why is user data retained for one year?</h3>
+      <p>This is to prevent repeated free trials and to maintain subscription verification. After a user cancels their subscription, data is retained on the server for up to one year, after which it is automatically deleted.</p>
+
+      <h3>10. Where is my emotion data stored? Is it safe?</h3>
+      <p>Your emotion records are stored securely in your personal iCloud. The app does not have access to this data. iCloud also enables syncing across devices and is protected by Apple’s security infrastructure.</p>
+
+      <h3>11. Will my records be deleted if I uninstall the app?</h3>
+      <p>No. Your records remain in iCloud even if the app is deleted. When you reinstall the app and log in with the same Apple ID, your records will be restored. However, if iCloud was disabled or data wasn’t backed up beforehand, some information may not be recovered.</p>
+
+      <footer style="text-align: center; margin-top: 60px; font-size: 0.9em; color: #777;">
+        © 2025 EmoPilot. All rights reserved.
+        <p>Contact: <a href="mailto:contact@emopilot.app">contact@emopilot.app</a></p>
+      </footer>
+    </main>
+  </div>
+  <script>
+    fetch("/emopilot/en/nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
