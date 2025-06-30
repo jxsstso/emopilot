@@ -1,100 +1,79 @@
-/* 전체 페이지 스타일 */
-
 body {
   margin: 0;
-  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  background-color: #0d1b2a; /* 전체 배경 navy */
+  color: #ddd;
 }
 
-/* ✅ 전체 레이아웃을 감싸는 컨테이너 */
-body > div {
+.container {
   display: flex;
-  background-color: #06101d; /* 메인 배경 navy 톤 */
-  color: #f0f0f0;
   min-height: 100vh;
 }
 
-/* ✅ nav (좌측 메뉴) */
-nav {
+/* === Sidebar(nav.html) === */
+#nav-placeholder {
   width: 220px;
-  background-color: #11141d; /* 어두운 회색 */
+  background-color: #141a22; /* 본문과 어울리는 어두운 회색 */
   padding: 20px;
   box-sizing: border-box;
-  flex-shrink: 0;
 }
 
-nav h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-nav ul {
+#nav-placeholder ul {
   padding-left: 0;
   list-style: none;
-  margin: 0;
 }
 
-nav li {
+#nav-placeholder li {
   margin: 10px 0;
-  display: flex;
-  align-items: center;
 }
 
-nav li img {
-  width: 20px;
-  height: 20px;
-  margin-right: 8px;
-}
-
-.nav-link {
+#nav-placeholder .nav-link {
   text-decoration: none;
-  color: #f0f0f0;
+  color: #ddd;
   font-size: 15px;
-  display: inline-block;
 }
 
-.nav-link:hover {
-  color: #ffd43b;
+#nav-placeholder .nav-link:hover {
+  color: #f0c13a;
 }
 
-.nav-link.active {
+#nav-placeholder .nav-link.active {
   font-weight: bold;
-  color: #ffd43b;
+  color: #f0c13a;
 }
 
-/* ✅ 본문 영역 */
+/* === Main content === */
 main {
   flex-grow: 1;
   padding: 60px 40px;
-  box-sizing: border-box;
-  line-height: 1.8;
   max-width: 800px;
   margin: 0 auto;
+  box-sizing: border-box;
+  line-height: 1.8;
 }
 
-/* ✅ 언어 전환 스위처 */
-#lang-switcher {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 14px;
-}
-
-/* ✅ 푸터 */
+/* === Footer === */
 footer {
   text-align: center;
   padding: 40px 0;
   font-size: 14px;
   color: #777;
-  background-color: #06101d; /* 푸터도 배경 통일 */
-  border-top: 1px solid #333;
+  background-color: #0d1b2a;
+  border-top: 1px solid #222;
 }
 
 footer a {
-  color: #bbb;
+  color: #f0c13a;
   text-decoration: none;
 }
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/* === 기타 === */
+blockquote {
+  margin: 20px 0;
+  font-style: italic;
+  color: #ccc;
 }
