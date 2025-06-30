@@ -9,6 +9,7 @@ html, body {
 body > div {
   min-height: 100vh;
   display: flex;
+  align-items: stretch;
 }
 
 #lang-switcher {
@@ -20,23 +21,25 @@ body > div {
 
 nav {
   width: 220px;
-  background-color: #ffffff; /* nav 배경을 흰색으로 */
+  background-color: #1e1e24; /* 어두운 회색으로 조정 */
   padding: 20px;
   box-sizing: border-box;
-  height: 100vh;
-  color: #333;
-  border-right: 1px solid #ddd;
+  color: #f0f0f0;
+  border-right: 1px solid #2c2c2c;
+  display: flex;
+  flex-direction: column;
 }
 
 nav h2 {
   font-size: 18px;
   margin-bottom: 10px;
-  color: #333;
+  color: #fcd34d;
 }
 
 nav ul {
   padding-left: 0;
   list-style: none;
+  flex-grow: 1;
 }
 
 nav li {
@@ -53,17 +56,17 @@ nav li img {
 
 .nav-link {
   text-decoration: none;
-  color: #333;
+  color: #f0f0f0;
   font-size: 15px;
 }
 
 .nav-link:hover {
-  color: #007bff;
+  color: #fcd34d;
 }
 
 .nav-link.active {
   font-weight: bold;
-  color: #007bff;
+  color: #fcd34d;
   background-color: transparent;
   padding-left: 0;
   border-left: none;
