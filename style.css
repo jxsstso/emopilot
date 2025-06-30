@@ -16,7 +16,7 @@ body {
 /* 네비게이션 영역 */
 nav {
   width: 220px;
-  background-color: #0b1622;
+  background-color: #0d1b2a;  /* 본문 배경색과 같게 설정 */
   padding: 20px;
   box-sizing: border-box;
 }
