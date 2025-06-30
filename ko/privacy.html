@@ -7,18 +7,18 @@
   <link rel="stylesheet" href="/emopilot/style.css" />
 </head>
 <body>
-  <div style="display: flex; min-height: 100vh;">
-    <!-- 왼쪽 nav 메뉴 -->
-    <div id="nav-placeholder" style="width: 220px; background-color: #f5f5f5; border-right: 1px solid #ddd; padding: 20px;"></div>
+  <div class="container">
+    <!-- 네비게이션 바 삽입 영역 -->
+    <div id="nav-placeholder"></div>
 
     <!-- 언어 전환 -->
-    <div id="lang-switcher" style="position: absolute; top: 20px; right: 20px;">
+    <div id="lang-switcher">
       <a href="/emopilot/en/privacy.html">EN</a>
     </div>
 
     <!-- 본문 -->
-    <main style="max-width: 800px; margin: 80px auto; padding: 0 20px; line-height: 1.8;">
-      <h1>개인정보 처리방침</h1>
+    <main class="content">
+      <h1 class="center-title">개인정보 처리방침</h1>
 
       <p><strong>1. 수집 및 이용 목적</strong></p>
       <ul>
@@ -70,19 +70,20 @@
         <li>Emopilot은 법령이나 서비스 변경에 따라 본 방침을 변경할 수 있으며, 변경 시 본 페이지에 고지합니다.</li>
       </ul>
 
-      <footer style="text-align: center; margin-top: 50px; font-size: 0.9em; color: #777;">
-        © 2025 EmoPilot. All rights reserved.
-        <p>문의: <a href="mailto:contact@emopilot.app">contact@emopilot.app</a></p>
+      <!-- 구분선과 푸터 -->
+      <hr class="footer-separator" />
+      <footer class="footer">
+        © 2025 EmoPilot. All rights reserved.<br>
+        문의: <a href="mailto:contact@emopilot.app" class="footer-link">contact@emopilot.app</a>
       </footer>
     </main>
   </div>
+
   <script>
     fetch("nav.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("nav-placeholder").innerHTML = data;
-  
-        // 여기서 처리해야 nav.html이 로드된 후 클래스 적용 가능
         const currentPath = window.location.pathname;
         document.querySelectorAll('nav a').forEach(link => {
           if (link.getAttribute('href') === currentPath) {
