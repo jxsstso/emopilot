@@ -111,3 +111,8 @@ blockquote {
   margin-left: 0;
   font-style: italic;
 }
+
+/* ✅ 추가된 내용: 흰 띠 제거용 */
+body > div {
+  background-color: #0d1b2a;
+}
