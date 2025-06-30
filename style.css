@@ -1,41 +1,41 @@
+/* Reset and layout */
 html, body {
   height: 100%;
   margin: 0;
-  background-color: #0d1b2a;
+  padding: 0;
+  background-color: #0d1b2a; /* 전체 배경색 navy tone */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-  color: #f0f0f0;
+  color: #f0f0f0; /* 본문 글자색 */
 }
 
+/* Wrapper to align nav and main side by side */
 body > div {
   height: 100%;
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-#lang-switcher {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 14px;
-}
-
+/* Navigation */
 nav {
   width: 220px;
-  background-color: #141824; /* 더 어두운 회색으로 nav와 본문 자연스럽게 연결 */
+  background-color: #0d1b2a; /* nav 배경색 본문과 동일하게 */
   padding: 20px;
   box-sizing: border-box;
   height: 100%;
-  color: #f0f0f0;
+  margin: 0;
+  border: none;
 }
 
 nav h2 {
   font-size: 18px;
   margin-bottom: 10px;
-  color: #fcd34d;
 }
 
 nav ul {
   padding-left: 0;
   list-style: none;
+  margin: 0;
 }
 
 nav li {
@@ -57,14 +57,15 @@ nav li img {
 }
 
 .nav-link:hover {
-  color: #fcd34d;
+  color: #ffcc00; /* hover 시 yellow tone 강조 */
 }
 
 .nav-link.active {
   font-weight: bold;
-  color: #fcd34d;
+  color: #ffcc00; /* active 강조 색상 */
 }
 
+/* Main content area */
 main {
   flex-grow: 1;
   padding: 60px 40px;
@@ -72,45 +73,32 @@ main {
   margin: 0 auto;
   box-sizing: border-box;
   line-height: 1.8;
-  background-color: #0d1b2a;
 }
 
-h1, h2, h3, h4 {
-  color: #fcd34d;
+/* Language switcher */
+#lang-switcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 14px;
 }
 
-a {
-  color: #fcd34d;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #eab308;
-}
-
+/* Footer */
 footer {
   text-align: center;
   padding: 40px 0;
   font-size: 14px;
-  color: #ccc;
-  background-color: transparent;
+  color: #999;
+  background-color: transparent; /* ✅ 배경 박스 제거 */
   margin-top: 80px;
-  border-top: none;
+  border-top: 1px solid #333;
 }
 
 footer a {
-  color: #fcd34d;
+  color: #ffcc00;
   text-decoration: none;
 }
 
 footer a:hover {
   text-decoration: underline;
-}
-
-blockquote {
-  color: #d1d5db;
-  border-left: 4px solid #fcd34d;
-  padding-left: 1em;
-  margin-left: 0;
-  font-style: italic;
 }
