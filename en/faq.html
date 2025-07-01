@@ -3,68 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FAQ – Emopilot</title>
-  <link rel="stylesheet" href="/emopilot/style.css" />
+  <title>Frequently Asked Questions – Emopilot</title>
+  <link rel="stylesheet" href="/emopilot/style.css"/>
 </head>
 <body>
-  <div style="display: flex; min-height: 100vh;">
-    <!-- ✅ Sidebar navigation -->
-    <div id="nav-placeholder" style="width: 220px; background-color: #f5f5f5; border-right: 1px solid #ddd; padding: 20px;"></div>
+  <div class="container">
+    <!-- Navigation Bar Placeholder -->
+    <div id="nav-placeholder"></div>
 
-    <!-- Language switch -->
-    <div id="lang-switcher" style="position: absolute; top: 20px; right: 20px;">
-      <a href="/emopilot/ko/faq.html">KO</a>
+    <!-- Language Switch -->
+    <div id="lang-switcher">
+      <a href="/emopilot/ko/faq.html" class="highlight">KO</a>
     </div>
 
-    <!-- Main content -->
-    <main style="max-width: 800px; margin: 100px auto; padding: 0 20px; line-height: 1.8;">
-      <h1>Frequently Asked Questions (FAQ)</h1>
+    <!-- Main Content -->
+    <main class="content">
+      <h1 class="center-title">Frequently Asked Questions (FAQ)</h1>
 
-      <h3>1. What do I need to start using the app?</h3>
-      <p>EmoPilot uses iCloud to securely store your emotion records. Therefore, you need to be logged into your iCloud account and have an active internet connection to connect with the app server.</p>
+      <h3 class="highlight">1. What do I need to use the app after installation?</h3>
+      <p>EmoPilot uses iCloud to securely store your emotion records.<br>
+      Therefore, you must be logged into your iCloud account and have an active internet connection for server authentication.</p>
 
-      <h3>2. How long can I use the app for free, and are there any feature limitations?</h3>
-      <p>The free usage period is 24 hours from the time you install the app. During this time, most features are fully available, except the AI advice function, which is limited to 2 times.</p>
+      <h3 class="highlight">2. How long does the free trial last and are there any feature limits?</h3>
+      <p>The free trial period lasts for 24 hours after the app is installed.<br>
+      During this time, most features are available without restrictions,<br>
+      but the "Advice" feature is limited to a maximum of 2 uses.</p>
 
-      <h3>3. As a subscriber, how often can I use the app and receive AI advice?</h3>
-      <p>You can use all core features—such as emotion recording, editing, and statistics—without any limits. The AI advice function, however, is limited to 3 times per day and up to 60 times per month.</p>
+      <h3 class="highlight">3. If I subscribe, how many times can I use the app and the AI advice?</h3>
+      <p>All app features like emotion logging, editing, and statistics are available without usage limits.<br>
+      The AI advice feature allows up to 3 uses per day, with a monthly maximum of 60 uses.</p>
 
-      <h3>4. How can I cancel my subscription or request a refund?</h3>
-      <p>You can cancel or request a refund through the in-app menu: 'Info → Manage Subscription'. EmoPilot follows Apple’s subscription and refund policy. For more details, please refer to Apple’s support page.</p>
+      <h3 class="highlight">4. How can I cancel my subscription or request a refund?</h3>
+      <p>You can cancel your subscription or request a refund from the "About → Manage Subscription" menu in the app.<br>
+      EmoPilot follows Apple’s subscription and refund policies.<br>
+      Please refer to Apple’s support page for detailed steps.</p>
 
-      <h3>5. How were the emotion and coping lists created?</h3>
-      <p>The emotion and coping method lists in EmoPilot are not based on strict medical guidelines but are inspired by psychological theories and real user experiences. They are designed to help users explore and define their own emotional strategies. All items can be freely added or removed by users to build a personalized experience.</p>
+      <h3 class="highlight">5. How were the emotion and coping lists created?</h3>
+      <p>EmoPilot’s emotion and coping lists are based on psychological theories and real user experiences, rather than strict medical criteria.<br>
+      These lists are not definitive, but are designed to help users explore their feelings and build their own personalized lists.<br>
+      You can freely add or delete any item.</p>
 
-      <h3>6. What languages does the app support? Will more be added?</h3>
-      <p>The app currently supports Korean and English. We plan to add more languages in the future, and updates will be announced on our official website.</p>
+      <h3 class="highlight">6. What languages does the app support? Will more be added?</h3>
+      <p>Currently, Korean and English are supported, with more languages planned in the future.<br>
+      Updates on language support will be shared through the official website.</p>
 
-      <h3>7. What AI system is used? Does it store my emotions or text?</h3>
-      <p>The AI advice feature is powered by OpenAI's ChatGPT 3.5. Your input is encrypted and transmitted securely, and it is not stored on the server beyond what’s required for processing. For more details, please refer to our privacy policy.</p>
+      <h3 class="highlight">7. What system does the AI use? Does it store my emotions or text?</h3>
+      <p>EmoPilot’s advice feature is powered by OpenAI’s ChatGPT 3.5 model.<br>
+      Your input is encrypted and sent to the server only for processing responses, and is not stored.<br>
+      For more details, please refer to our privacy policy.</p>
 
-      <h3>8. Are there any restrictions on AI usage?</h3>
-      <p>Input that includes violent, hateful, or sexually explicit content is restricted under OpenAI’s content policy. Repeated violations may result in usage limits. To ensure safety, input is filtered and monitored internally.</p>
+      <h3 class="highlight">8. Are there any restrictions or prohibited content when using the AI?</h3>
+      <p>Inputs that contain violence, hate speech, or sexually explicit content — which violate OpenAI’s content policies — are restricted.<br>
+      Repeated violations may result in usage limitations.<br>
+      To ensure safe use, AI inputs are internally filtered and monitored.</p>
 
-      <h3>9. Why is user data retained for one year?</h3>
-      <p>This is to prevent repeated free trials and to maintain subscription verification. After a user cancels their subscription, data is retained on the server for up to one year, after which it is automatically deleted.</p>
+      <h3 class="highlight">9. Why is user information kept for one year?</h3>
+      <p>To prevent repeated free trials and verify subscription status, EmoPilot retains user data for a limited period.<br>
+      Even after unsubscribing, your information remains on the server for one year and is automatically deleted afterward.</p>
 
-      <h3>10. Where is my emotion data stored? Is it safe?</h3>
-      <p>Your emotion records are stored securely in your personal iCloud. The app does not have access to this data. iCloud also enables syncing across devices and is protected by Apple’s security infrastructure.</p>
+      <h3 class="highlight">10. Where are my emotion records stored? Are they secure?</h3>
+      <p>Your records are saved in your personal iCloud, and the developer has no access to them.<br>
+      iCloud also enables synchronization across devices, and your data is protected by Apple’s security systems.</p>
 
-      <h3>11. Will my records be deleted if I uninstall the app?</h3>
-      <p>No. Your records remain in iCloud even if the app is deleted. When you reinstall the app and log in with the same Apple ID, your records will be restored. However, if iCloud was disabled or data wasn’t backed up beforehand, some information may not be recovered.</p>
+      <h3 class="highlight">11. Will my records be deleted if I uninstall the app?</h3>
+      <p>Your records will remain in iCloud even if the app is deleted.<br>
+      When you reinstall the app and log in with the same Apple ID, your previous records will be restored.<br>
+      However, if iCloud was disabled or you didn’t manually back up before deletion, some data may not be recoverable.</p>
 
-      <footer style="text-align: center; margin-top: 60px; font-size: 0.9em; color: #777;">
-        © 2025 EmoPilot. All rights reserved.
-        <p>Contact us: <a href="mailto:contact@emopilot.app">contact@emopilot.app</a></p>
+      <!-- Footer -->
+      <hr class="footer-separator" />
+      <footer class="footer">
+        © 2025 EmoPilot. All rights reserved.<br>
+        Contact: <a href="mailto:contact@emopilot.app" class="footer-link">contact@emopilot.app</a>
       </footer>
     </main>
   </div>
+
   <script>
-    fetch("/emopilot/en/nav.html")
+    fetch("nav.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("nav-placeholder").innerHTML = data;
-
         const currentPath = window.location.pathname;
         document.querySelectorAll('nav a').forEach(link => {
           if (link.getAttribute('href') === currentPath) {
