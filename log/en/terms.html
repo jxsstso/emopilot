@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usage Guide & Subscription Info – Emopilot</title>
+  <link rel="stylesheet" href="/emopilot/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation Bar Placeholder -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Language Switch -->
+    <div id="lang-switcher">
+      <a href="/emopilot/ko/terms.html">KO</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="content">
+      <h1 class="center-title">Terms of Use</h1>
+
+      <section>
+        <h2>📌 Free Trial</h2>
+        <ul>
+          <li>New users can enjoy a free trial for 24 hours after installing the app.</li>
+          <li>During this time, you can use the <strong>"Advice"</strong> feature up to <strong>2 times</strong>.</li>
+          <li>Before using the free trial, you must check <strong>"I agree"</strong> and tap the <strong>"Start Free Trial"</strong> button after reviewing the Privacy Policy and Terms of Use.</li>
+          <li>By tapping the button, you are considered to have agreed to the above.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>💳 Subscription</h2>
+        <ul>
+          <li>After the free trial ends, you’ll need to subscribe to continue using the app.</li>
+          <li><strong>Tap “Subscribe” and complete payment</strong> to start your subscription. It will automatically renew monthly.</li>
+          <li>You can cancel your subscription at any time in the app under <strong>"Account Info &gt; Cancel Subscription"</strong>.</li>
+          <li>Subscribers can use the <strong>"Advice"</strong> feature up to <strong>3 times per day</strong>, and <strong>60 times per month</strong>.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>⚠️ AI Usage Policy</h2>
+        <ul>
+          <li>If your input violates AI usage guidelines, a <strong>warning message will appear</strong> and the session will still be counted as used.</li>
+          <li>Examples of violations: hate speech, threats, offensive or inappropriate language.</li>
+          <li>Repeated violations may result in <strong>warnings or temporary restrictions</strong>.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🚀 After Subscribing</h2>
+        <ul>
+          <li>Once you've completed your subscription, please <strong>close and reopen the app</strong> to refresh your access.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>✅ Consent Notice</h2>
+        <p>
+          By selecting <strong>“I agree”</strong> and tapping either <strong>“Start Free Trial”</strong> or <strong>“Subscribe”</strong>, you are considered to have agreed to all of the above.
+        </p>
+      </section>
+
+      <!-- Footer -->
+      <hr class="footer-separator" />
+      <footer class="footer">
+        © 2025 EmoPilot. All rights reserved.<br>
+        Contact: <a href="mailto:contact@emopilot.app" class="footer-link">contact@emopilot.app</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
