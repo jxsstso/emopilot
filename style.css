@@ -116,9 +116,10 @@ blockquote {
   background: #555;
 }
 
-/* ✅ 추가: FAQ 제목 강조용 */
+/* 기존 highlight 정의에 추가하거나 새로 작성 */
 .highlight {
   color: #ffd700;
   font-weight: bold;
+  font-style: italic; /* ✅ 이탤릭체 적용 */
 }
 
