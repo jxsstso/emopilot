@@ -123,3 +123,8 @@ blockquote {
   font-style: italic; /* ✅ 이탤릭체 적용 */
 }
 
+.bold-italic {
+  font-weight: bold;
+  font-style: italic;
+}
+
