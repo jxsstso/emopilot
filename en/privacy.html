@@ -7,83 +7,79 @@
   <link rel="stylesheet" href="/emopilot/style.css" />
 </head>
 <body>
-  <div style="display: flex; min-height: 100vh;">
-    <!-- Navigation menu placeholder -->
-    <div id="nav-placeholder" style="width: 220px; background-color: #f5f5f5; border-right: 1px solid #ddd; padding: 20px;"></div>
+  <div class="container">
+    <div id="nav-placeholder"></div>
 
-    <!-- Language Switcher -->
-    <div id="lang-switcher" style="position: absolute; top: 20px; right: 20px;">
+    <div id="lang-switcher">
       <a href="/emopilot/ko/privacy.html">KO</a>
     </div>
 
-    <!-- Main Content -->
-    <main style="max-width: 800px; margin: 80px auto; padding: 0 20px; line-height: 1.8;">
-      <h1>Privacy Policy</h1>
+    <main class="content">
+      <h1 class="center-title">Privacy Policy</h1>
 
-      <p><strong>1. Data Collection and Purpose</strong></p>
+      <p><strong><em>1. Purpose of Data Collection and Use</em></strong></p>
       <ul>
-        <li>Emopilot stores each user’s CloudKit ID to verify identity and track usage.</li>
-        <li>This applies during both the free trial and after subscription begins.</li>
-        <li>CloudKit ID is retained for up to one year after a subscription ends or is not started.</li>
+        <li>EmoPilot stores each user's CloudKit ID on its server for user authentication and usage tracking.</li>
+        <li>The CloudKit ID is saved during the free trial period and remains the same after a subscription begins.</li>
+        <li>This information is retained for one year even if the user does not subscribe or cancels their subscription.</li>
       </ul>
 
-      <p><strong>2. Retention Period and Abuse Prevention</strong></p>
+      <p><strong><em>2. Data Retention and Abuse Prevention</em></strong></p>
       <ul>
-        <li>To prevent repeated abuse of the free trial, CloudKit IDs are retained for up to one year.</li>
-        <li>This data is used solely to determine access eligibility and is not used for any other purpose or shared externally.</li>
+        <li>To prevent repeated abuse of the free trial, EmoPilot retains CloudKit IDs for up to one year.</li>
+        <li>This data is used solely to determine usage restrictions and will not be used for any other purpose or shared externally.</li>
       </ul>
 
-      <p><strong>3. Use of the “Advice” Feature</strong></p>
+      <p><strong><em>3. When Using the "Advice" Feature</em></strong></p>
       <ul>
-        <li>When using the Advice feature, the selected emotion and any text input are sent to the AI server.</li>
-        <li>These inputs are not stored on our server and are not used for any other purpose.</li>
+        <li>When using the "Advice" feature, the selected emotional state and any input are transmitted to the AI server.</li>
+        <li>This data is used only to generate advice and is not stored on either the EmoPilot or AI servers, nor used for any other purpose.</li>
       </ul>
 
-      <p><strong>4. Data Security</strong></p>
+      <p><strong><em>4. Data Security Measures</em></strong></p>
       <ul>
-        <li>All emotional records are saved securely in the user’s iCloud using Apple’s protection framework.</li>
-        <li>We apply encryption and access control measures to protect user data.</li>
+        <li>All records are stored in the user’s personal iCloud and follow Apple’s security protocols.</li>
+        <li>EmoPilot uses encryption and access control measures to protect user data.</li>
       </ul>
 
-      <p><strong>5. Cookies and Logs</strong></p>
+      <p><strong><em>5. Cookies and Logs</em></strong></p>
       <ul>
-        <li>Basic visit data (such as IP address and browser type) may be collected for performance monitoring and is not used to identify individuals.</li>
+        <li>This website may collect visit logs (IP, browser info, etc.) in server log format, used solely for performance analysis.</li>
       </ul>
 
-      <p><strong>6. No Third-Party Sharing</strong></p>
+      <p><strong><em>6. No Third-Party Sharing</em></strong></p>
       <ul>
-        <li>We do not share or sell user data to any third parties.</li>
-        <li>All data is used solely for app functionality and statistical analysis.</li>
+        <li>EmoPilot does not sell or share user information with third parties. Data is used only to provide app features and for statistical analysis.</li>
       </ul>
 
-      <p><strong>7. User Rights</strong></p>
+      <p><strong><em>7. User Rights</em></strong></p>
       <ul>
-        <li>Emopilot does not offer manual data deletion on request but ensures that data is deleted automatically after a defined retention period.</li>
+        <li>EmoPilot does not accept direct requests for data deletion, but enforces an automatic deletion policy after a set period.</li>
       </ul>
 
-      <p><strong>8. Consent</strong></p>
+      <p><strong><em>8. Consent</em></strong></p>
       <ul>
-        <li>By tapping “Agree” and selecting “Free Use” or “Subscribe”, the user is deemed to have accepted this privacy policy.</li>
+        <li>By tapping “Agree” and selecting “Free Trial” or “Subscribe,” you are considered to have agreed to this privacy policy.</li>
       </ul>
 
-      <p><strong>9. Policy Updates</strong></p>
+      <p><strong><em>9. Policy Changes</em></strong></p>
       <ul>
-        <li>This policy may be updated as the app evolves. Any changes will be announced on this page.</li>
+        <li>EmoPilot may revise this policy in accordance with legal or service changes and will notify users of such changes on this page.</li>
       </ul>
 
-      <footer style="text-align: center; margin-top: 50px; font-size: 0.9em; color: #777;">
-        © 2025 EmoPilot. All rights reserved.
-        <p>Contact us: <a href="mailto:contact@emopilot.app">contact@emopilot.app</a></p>
+      <hr class="footer-separator" />
+      <footer class="footer">
+        © 2025 EmoPilot. All rights reserved.<br>
+        Contact: <a href="mailto:contact@emopilot.app" class="footer-link">contact@emopilot.app</a>
       </footer>
     </main>
   </div>
-   <script>
+
+  <script>
     fetch("nav.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("nav-placeholder").innerHTML = data;
-  
-        // 여기서 처리해야 nav.html이 로드된 후 클래스 적용 가능
         const currentPath = window.location.pathname;
         document.querySelectorAll('nav a').forEach(link => {
           if (link.getAttribute('href') === currentPath) {
