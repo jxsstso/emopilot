@@ -118,7 +118,7 @@ blockquote {
 
 /* 기존 highlight 정의에 추가하거나 새로 작성 */
 .highlight {
-  color: #ffd700;
+  color: yellow;
  /* font-weight: bold;*/
   font-style: italic; /* ✅ 이탤릭체 적용 */
 }
