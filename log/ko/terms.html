@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이용 안내 및 구독 정보 – Emopilot</title>
+  <link rel="stylesheet" href="/emopilot/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- 네비게이션 바 삽입 영역 -->
+    <div id="nav-placeholder"></div>
+
+    <!-- 언어 전환 -->
+    <div id="lang-switcher">
+      <a href="/emopilot/en/terms.html">EN</a>
+    </div>
+
+    <!-- 본문 -->
+    <main class="content">
+      <h1 class="center-title">이용 안내 및 구독 정보</h1>
+
+      <section>
+        <h2>📌 무료 사용 안내</h2>
+        <ul>
+          <li>앱을 처음 설치한 사용자는 24시간 동안 무료로 이용할 수 있습니다.</li>
+          <li>이 기간 동안 <strong>‘조언받기’ 기능은 최대 2회까지</strong> 사용 가능합니다.</li>
+          <li>무료 이용을 시작하기 전, 개인정보처리방침 및 이용약관에 <strong>‘동의합니다’</strong>를 선택하고 <strong>‘무료사용’</strong> 버튼을 눌러야 합니다.</li>
+          <li>버튼을 누르면 위 내용에 동의한 것으로 간주됩니다.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>💳 유료 구독 안내</h2>
+        <ul>
+          <li>무료 사용 기간이 끝난 후 앱을 계속 사용하려면 <strong>월간 구독</strong>을 신청해야 합니다.</li>
+          <li><strong>‘구독하기’ 버튼을 누르고 결제를 완료하면 구독이 시작되며, 매월 자동 결제</strong>됩니다.</li>
+          <li>구독은 언제든지 앱 내 <strong>‘정보보기 &gt; 구독해지’</strong> 메뉴를 통해 해지할 수 있습니다.</li>
+          <li>구독자는 <strong>하루 최대 3회, 한 달 최대 60회</strong>까지 ‘조언받기’ 기능을 이용할 수 있습니다.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>⚠️ AI 정책 위반에 대한 안내</h2>
+        <ul>
+          <li>입력 내용에 AI 정책 위반 사항이 포함될 경우, <strong>경고 메시지가 표시되며 해당 회차는 사용 처리</strong>됩니다.</li>
+          <li>위반 예시: 혐오 표현, 위협, 불쾌하거나 부적절한 언어 등</li>
+          <li>위반이 반복되면 <strong>추가 경고 또는 일시적인 이용 제한</strong>이 적용될 수 있습니다.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🚀 구독 후 앱 재시작 안내</h2>
+        <ul>
+          <li>구독을 완료한 후에는 <strong>앱을 완전히 종료한 뒤 다시 실행</strong>해 주세요.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>✅ 동의 안내</h2>
+        <p>
+          <strong>‘동의합니다’</strong>를 선택하고 <strong>‘무료사용’ 또는 ‘구독하기’</strong> 버튼을 누르시면, 위의 모든 내용에 동의한 것으로 간주됩니다.
+        </p>
+      </section>
+
+      <!-- 구분선과 푸터 -->
+      <hr class="footer-separator" />
+      <footer class="footer">
+        © 2025 EmoPilot. All rights reserved.<br>
+        문의: <a href="mailto:contact@emopilot.app" class="footer-link">contact@emopilot.app</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
