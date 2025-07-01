@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Emopilot</title>
+  <link rel="stylesheet" href="/emopilot/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div id="nav-placeholder"></div>
+
+    <div id="lang-switcher">
+      <a href="/emopilot/ko/privacy.html">KO</a>
+    </div>
+
+    <main class="content">
+      <h1 class="center-title">Privacy Policy</h1>
+
+      <p><strong><em>1. Purpose of Data Collection and Use</em></strong></p>
+      <ul>
+        <li>EmoPilot stores each user's CloudKit ID on its server for user authentication and usage tracking.</li>
+        <li>The CloudKit ID is saved during the free trial period and remains the same after a subscription begins.</li>
+        <li>This information is retained for one year even if the user does not subscribe or cancels their subscription.</li>
+      </ul>
+
+      <p><strong><em>2. Data Retention and Abuse Prevention</em></strong></p>
+      <ul>
+        <li>To prevent repeated abuse of the free trial, EmoPilot retains CloudKit IDs for up to one year.</li>
+        <li>This data is used solely to determine usage restrictions and will not be used for any other purpose or shared externally.</li>
+      </ul>
+
+      <p><strong><em>3. When Using the "Advice" Feature</em></strong></p>
+      <ul>
+        <li>When using the "Advice" feature, the selected emotional state and any input are transmitted to the AI server.</li>
+        <li>This data is used only to generate advice and is not stored on either the EmoPilot or AI servers, nor used for any other purpose.</li>
+      </ul>
+
+      <p><strong><em>4. Data Security Measures</em></strong></p>
+      <ul>
+        <li>All records are stored in the user’s personal iCloud and follow Apple’s security protocols.</li>
+        <li>EmoPilot uses encryption and access control measures to protect user data.</li>
+      </ul>
+
+      <p><strong><em>5. Cookies and Logs</em></strong></p>
+      <ul>
+        <li>This website may collect visit logs (IP, browser info, etc.) in server log format, used solely for performance analysis.</li>
+      </ul>
+
+      <p><strong><em>6. No Third-Party Sharing</em></strong></p>
+      <ul>
+        <li>EmoPilot does not sell or share user information with third parties. Data is used only to provide app features and for statistical analysis.</li>
+      </ul>
+
+      <p><strong><em>7. User Rights</em></strong></p>
+      <ul>
+        <li>EmoPilot does not accept direct requests for data deletion, but enforces an automatic deletion policy after a set period.</li>
+      </ul>
+
+      <p><strong><em>8. Consent</em></strong></p>
+      <ul>
+        <li>By tapping “Agree” and selecting “Free Trial” or “Subscribe,” you are considered to have agreed to this privacy policy.</li>
+      </ul>
+
+      <p><strong><em>9. Policy Changes</em></strong></p>
+      <ul>
+        <li>EmoPilot may revise this policy in accordance with legal or service changes and will notify users of such changes on this page.</li>
+      </ul>
+
+      <hr class="footer-separator" />
+      <footer class="footer">
+        © 2025 EmoPilot. All rights reserved.<br>
+        Contact: <a href="mailto:contact@emopilot.app" class="footer-link">contact@emopilot.app</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
