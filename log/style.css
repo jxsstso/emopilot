@@ -138,3 +138,12 @@ blockquote {
   }
 }
 
+.page-header {
+  color: #94a3b8; /* 연한 청회색 */
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
