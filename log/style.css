@@ -128,13 +128,13 @@ blockquote {
 }
 
 @media screen and (max-width: 768px) {
-  .sidebar {
+  nav {
     display: none;
   }
 
-  .main-content {
+  .content {
     margin-left: 0 !important;
+    padding: 0 16px; /* 양옆 여백 약간 */
   }
-}
 
 
