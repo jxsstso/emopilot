@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +14,7 @@
     }
     h1 {
       color: #facc15;
+      font-size: 2em;
     }
     a {
       color: #facc15;
@@ -36,6 +36,12 @@
       text-align: center;
       margin-top: 40px;
       font-size: 1rem;
+      flex-wrap: wrap; /* 모바일 대응을 위해 추가 */
+    }
+    nav a {
+      display: inline-block;
+      margin: 0 8px;
+      margin-bottom: 6px;
     }
     section {
       max-width: 600px;
@@ -61,6 +67,19 @@
     footer a {
       color: #facc15;
     }
+
+    /* ✅ 반응형 대응 추가 */
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 1.5em;
+      }
+      section {
+        padding: 0 20px;
+      }
+      nav {
+        font-size: 0.95rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -74,18 +93,18 @@
   </header>
 
   <nav>
-    <a href="/log/en/behind.html">Behind this App</a>  |
-    <a href="/log/en/privacy.html">Privacy Policy</a>  |
-    <a href="/log/en/terms.html">Terms of Use</a>  |
+    <a href="/log/en/behind.html">Behind this App</a> |
+    <a href="/log/en/privacy.html">Privacy Policy</a> |
+    <a href="/log/en/terms.html">Terms of Use</a> |
     <a href="/log/en/faq.html">FAQ</a>
   </nav>
 
   <section>
     <h2>About the App</h2>
     <p>
-       EmoPilot helps you record your emotions, understand patterns, 
-       <br>and get AI-generated advice tailored to your emotional state.</br>
-       <br>Join us on a journey to understand and support your emotional well-being.</br>
+      EmoPilot helps you record your emotions, understand patterns, <br>
+      and get AI-generated advice tailored to your emotional state. <br>
+      Join us on a journey to understand and support your emotional well-being.
     </p>
   </section>
 
