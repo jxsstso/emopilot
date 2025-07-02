@@ -139,11 +139,21 @@ blockquote {
 }
 
 .page-header {
-  color: #94a3b8; /* 연한 청회색 */
-  font-size: 0.95rem;
+  color: #cbd5e1; /* 기존보다 살짝 더 밝은 slate-300 */
+  font-size: 1.2rem;
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0 10px;
   font-weight: 400;
   letter-spacing: 0.3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.page-header img {
+  width: 48px; /* 적당한 사이즈로 조정 가능 */
+  height: 48px;
+  border-radius: 12px; /* 약간 부드러운 느낌 */
+  opacity: 0.9;
 }
 
