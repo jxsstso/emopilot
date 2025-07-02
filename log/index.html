@@ -51,9 +51,9 @@
       if (input === correctPassword) {
         const lang = navigator.language || navigator.userLanguage;
         if (lang.startsWith("ko")) {
-          window.location.replace("/emopilot/log/ko/index.html");
+          window.location.replace("/log/ko/index.html");
         } else {
-          window.location.replace("/emopilot/log/en/index.html");
+          window.location.replace("/log/en/index.html");
         }
       } else {
         errorBox.textContent = "Incorrect password. Try again.";
