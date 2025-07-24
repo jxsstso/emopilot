@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>버전 정보 – Emopilot</title>
+  <link rel="stylesheet" href="/log/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- 네비게이션 바 삽입 영역 -->
+    <div id="nav-placeholder"></div>
+
+    <!-- 언어 전환 -->
+    <div id="lang-switcher">
+      <a href="/log/en/version.html">EN</a>
+    </div>
+
+    <!-- 본문 -->
+    <main class="content">
+      <h1 class="center-title">버전 1.0.1 – 기능 소개</h1>
+
+      <section>
+        <h2>✅ 감정 기록</h2>
+        <ul>
+          <li>감정 및 대처방안 선택</li>
+          <li>감정 노트 작성</li>
+          <li>iCloud에 안전하게 기록 저장</li>
+          <li>세부감정 및 대처방안 항목 추가/삭제</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🤖 AI 조언</h2>
+        <ul>
+          <li>선택한 감정, 대처방안, 조언 종류에 따른 맞춤형 조언 제공</li>
+          <li>GPT-3.5 기반</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🕒 기록 보기</h2>
+        <ul>
+          <li>최근 기록 보기</li>
+          <li>날짜 설정으로 검색</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>📊 통계</h2>
+        <ul>
+          <li>기간별 감정 변화 그래프</li>
+          <li>주요 감정, 세부 감정, 대처방안 순위</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>⚙️ 설정</h2>
+        <ul>
+          <li>언어 설정: 영어 / 한국어</li>
+          <li>폰트 크기 및 테마 설정</li>
+          <li>잠금 화면 및 비밀번호 설정</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>❓ 퀵 도움말</h2>
+        <ul>
+          <li>각 화면의 ? 아이콘을 눌러 간단한 사용법 보기</li>
+          <li>도움말은 화면 아래에서 슬라이드로 나타나는 bottom sheet 형태로 표시됩니다</li>
+        </ul>
+      </section>
+
+      <hr class="footer-separator" />
+      <footer class="footer">
+        © 2025 EmoPilot. All rights reserved.<br>
+        문의: <a href="mailto:contact@emopilot.app" class="footer-link">contact@emopilot.app</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
