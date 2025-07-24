@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Version Info – Emopilot</title>
+  <link rel="stylesheet" href="/log/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation bar placeholder -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Language switcher -->
+    <div id="lang-switcher">
+      <a href="/log/ko/version.html">KO</a>
+    </div>
+
+    <!-- Main content -->
+    <main class="content">
+      <h1 class="center-title">Version 1.0.1 – Feature Overview</h1>
+
+      <section>
+        <h2>✅ Emotion Logging</h2>
+        <ul>
+          <li>Select emotions and coping strategies</li>
+          <li>Write personal emotion notes</li>
+          <li>Save all records securely with iCloud</li>
+          <li>Add or remove items for detailed emotions and coping strategies</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🤖 AI Advice</h2>
+        <ul>
+          <li>Personalized advice based on selected emotion, strategy, and advice type</li>
+          <li>Powered by GPT-3.5</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🕒 History</h2>
+        <ul>
+          <li>View recent records</li>
+          <li>Search by custom date range</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>📊 Statistics</h2>
+        <ul>
+          <li>Emotion trend graph over time</li>
+          <li>Rankings for main emotions, detailed emotions, and coping strategies</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>⚙️ Settings</h2>
+        <ul>
+          <li>Language: English / Korean</li>
+          <li>Font size and theme customization</li>
+          <li>Lock screen and password settings</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>❓ Quick Help</h2>
+        <ul>
+          <li>Tap the ? icon on each screen for a usage guide</li>
+          <li>The guide appears as a bottom sheet for easy viewing</li>
+        </ul>
+      </section>
+
+      <hr class="footer-separator" />
+      <footer class="footer">
+        © 2025 EmoPilot. All rights reserved.<br>
+        Contact: <a href="mailto:contact@emopilot.app" class="footer-link">contact@emopilot.app</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
