@@ -164,5 +164,5 @@ blockquote {
 
 .faq-item a {
   color: red;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
