@@ -166,3 +166,9 @@ blockquote {
   color: red;
   text-decoration: none; 
 }
+
+.faq-item p {
+  margin-left: 1.5em;
+  color: #555;
+}
+
