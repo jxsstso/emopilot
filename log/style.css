@@ -127,10 +127,17 @@ blockquote {
   font-style: italic;
 }
 
+/*
 @media screen and (max-width: 768px) {
   #nav-placeholder nav {
     display: none !important;
   }
+*/
+ @media (max-width: 1024px) {
+  .mobile-hide {
+    display: none;
+  }
+}
 
   .content {
     margin-left: 0 !important;
