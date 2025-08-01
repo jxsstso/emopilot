@@ -141,13 +141,12 @@ blockquote {
 
 
 @media (max-width: 1366px) {
-  #nav-placeholder nav {
-    display: none !important;
+  .mobile-hide {
+    display: none;
   }
-  
-  .content {
-    margin-left: 0 !important;
-    padding: 0 16px;
+
+  .main-content {
+    margin-left: 0; /* 또는 padding-left */
   }
 }
 
