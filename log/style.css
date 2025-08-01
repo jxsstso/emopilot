@@ -127,13 +127,14 @@ blockquote {
   font-style: italic;
 }
 
-/*
+
 @media screen and (max-width: 768px) {
   #nav-placeholder nav {
     display: none !important;
   }
-*/
 
+
+/*
 @media (max-device-width: 1366px) {
   .mobile-hide {
     display: none;
@@ -144,7 +145,7 @@ blockquote {
     padding-left: 1rem; /* 필요 시 */
   }
 }
-
+*/
 
   .content {
     margin-left: 0 !important;
