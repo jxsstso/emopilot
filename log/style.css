@@ -127,7 +127,7 @@ blockquote {
   font-style: italic;
 }
 
-/*
+
 @media screen and (max-width: 768px) {
   #nav-placeholder nav {
     display: none !important;
@@ -137,9 +137,9 @@ blockquote {
     padding: 0 16px;
   }
 }
-*/
 
 
+/*
 @media (max-width: 1366px) {
   .mobile-hide {
     display: none;
@@ -149,7 +149,7 @@ blockquote {
     margin-left: 0; /* 또는 padding-left */
   }
 }
-
+*/
 
  
 
