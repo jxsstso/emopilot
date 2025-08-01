@@ -136,22 +136,7 @@ blockquote {
     margin-left: 0 !important;
     padding: 0 16px;
   }
-}
-
-
-/*
-@media (max-width: 1366px) {
-  .mobile-hide {
-    display: none;
-  }
-
-  .main-content {
-    margin-left: 0; /* 또는 padding-left */
-  }
-}
-*/
-
- 
+} 
 
 .page-header {
   position: absolute;
