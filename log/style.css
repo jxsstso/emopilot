@@ -172,3 +172,8 @@ blockquote {
   margin-left: 2.5em;
 }
 
+.centered-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
