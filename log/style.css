@@ -133,11 +133,18 @@ blockquote {
     display: none !important;
   }
 */
- @media (max-width: 1024px) {
+
+@media (max-device-width: 1366px) {
   .mobile-hide {
     display: none;
   }
+
+  .main-content {
+    margin-left: 0;
+    padding-left: 1rem; /* 필요 시 */
+  }
 }
+
 
   .content {
     margin-left: 0 !important;
