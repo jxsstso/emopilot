@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detrás de esta app – EmoPilot</title>
+  <link rel="stylesheet" href="/log/style.css"/>
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation Bar Placeholder -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Language Switch -->
+    <div id="lang-switcher">
+      <a href="/log/ko/behind.html">KO</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="content">
+      <h1 class="center-title">Detrás de esta App</h1>
+
+      <div class="center-text">
+      <blockquote style="color: yellow;">
+        “En el momento en que nombras y observas tu emoción, comienza a perder su poder.”<br>
+        — Inspirado en Daniel J. Siegel, <em>The Whole-Brain Child</em>
+      </blockquote>
+
+      <p>Desde tiempos antiguos, las personas sabias aprendieron a separarse de sus emociones y a observarlas.
+      Sin embargo, en la vida moderna, muchos de nosotros seguimos sintiéndonos abrumados o atrapados por ellas.</p>
+
+      <p>Muchas veces evitamos o reprimimos nuestras emociones creyendo que es lo racional o correcto.<br>
+      Tal vez por miedo a enfrentarlas, o porque las circunstancias externas hacen difícil expresarlas.<br>
+      Pero las emociones surgen por razones válidas y necesitan ser expresadas de manera adecuada.<br>
+      Reprimirlas puede afectar tanto la salud física como el funcionamiento cognitivo, 
+      deteriorando así el bienestar emocional.</p>
+
+      <p>EmoPilot Log es mucho más que un diario emocional.
+      Es una herramienta diseñada para ayudarte a observar tus emociones con claridad y seguridad.<br>
+      Esta app ofrece un espacio seguro donde puedes reflexionar sobre tus sentimientos a tu propio ritmo.</p>
+      
+      <p>Al principio puede resultar extraño o difícil observar tus emociones o ponerlas en palabras. <br>
+      Para ayudarte a comenzar, EmoPilot Log te ofrece una variedad de emociones, desde las más básicas hasta las más sutiles y matizadas. <br>
+      Tómate tu tiempo para explorarlas y elige aquellas que mejor describan cómo te sientes en este momento.<br>
+      Si no encuentras una etiqueta adecuada, o prefieres expresarte con tus propias palabras, 
+      también puedes añadir emociones personalizadas.</p>
+
+      <p>Este espacio es tuyo — un lugar donde puedes explorar, definir y expresar lo que estás viviendo  
+      de la forma que más se alinee con tu experiencia.<br> 
+      Al elegir tus emociones una por una, puedes comprender mejor lo que estás sintiendo.<br>
+      Al reflexionar sobre cómo afrontarlas, la app te ayuda a identificar el tipo de cuidado que podrías necesitar.<br>
+      La función de <strong>'Consejo'</strong> puede ofrecerte orientación o apoyo, 
+      ayudándote a ver tus emociones con mayor objetividad y sentirte acompañado.</p>
+
+      <p>Todos tus registros se guardan de forma segura en tu iCloud, 
+      y podrás consultar estadísticas simples sobre tus emociones y métodos de afrontamiento.<br>
+      Así, con el tiempo, podrás desarrollar una comprensión más profunda de ti mismo.</p>
+
+      <p>Al seguir utilizando esta app,
+      esperamos que te conviertas en quien lidera tus emociones — y tu vida.</p>
+      </div>
+
+      <!-- Footer -->
+      <hr class="footer-separator" />
+      <footer class="footer">
+        © 2025 EmoPilot. Todos los derechos reservados.<br>
+        Contacto: <a href="mailto:contact@emopilot.app" class="footer-link">contact@emopilot.app</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
