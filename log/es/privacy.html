@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad – Emopilot</title>
+  <link rel="stylesheet" href="/log/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div id="nav-placeholder"></div>
+
+    <div id="lang-switcher">
+      <a href="/log/ko/privacy.html">KO</a>
+    </div>
+
+    <main class="content">
+      <h1 class="center-title">Política de Privacidad</h1>
+
+      <p><strong><em>1. Propósito de la recopilación y uso de datos</em></strong></p>
+      <ul>
+        <li>EmoPilot Log guarda el ID de CloudKit de cada usuario en su servidor para autenticación y seguimiento de uso.</li>
+        <li>EmoPilot Log detecta el país del usuario a partir de su dirección IP con fines estadísticos y de análisis. 
+            Sin embargo, la dirección IP no se almacena en la base de datos.</li>
+        <li>La información del usuario se guarda durante el período de prueba gratuita y se mantiene igual una vez iniciada la suscripción.</li>
+        <li>Esta información se conserva durante un año, incluso si el usuario no se suscribe o cancela la suscripción.</li>
+      </ul>
+
+      <p><strong><em>2. Retención de datos y prevención de abusos</em></strong></p>
+      <ul>
+        <li>Para prevenir abusos repetidos del período de prueba gratuita, EmoPilot Log conserva los ID de CloudKit durante un máximo de un año.</li>
+        <li>Estos datos se utilizan únicamente para determinar restricciones de uso y no se comparten ni utilizan con otros fines.</li>
+      </ul>
+
+      <p><strong><em>3. Manejo de datos al usar la función "Consejo"</em></strong></p>
+      <ul>
+        <li>Al usar la función "Consejo", el estado emocional seleccionado y el texto introducido se transmiten al servidor de OpenAI.</li>
+        <li>La entrada del usuario se procesa a través de la API de OpenAI y puede ser retenida temporalmente (hasta 30 días) en sus servidores para fines de monitoreo de abuso, de acuerdo con la política de uso de datos de OpenAI. 
+            Sin embargo, estos datos no se utilizan para entrenar ni mejorar modelos de IA.</li>
+        <li>Estos datos se usan únicamente para generar respuestas y no se almacenan en el servidor de EmoPilot ni se usan para ningún otro propósito.</li>
+      </ul>
+
+      <p><strong><em>4. Medidas de seguridad de los datos</em></strong></p>
+      <ul>
+        <li>Todos los registros se almacenan en el iCloud personal del usuario y siguen los protocolos de seguridad de Apple.</li>
+        <li>EmoPilot Log utiliza cifrado y controles de acceso para proteger los datos del usuario.</li>
+      </ul>
+
+      <p><strong><em>5. Cookies y registros</em></strong></p>
+      <ul>
+        <li>Este sitio web no utiliza cookies ni recopila información de los visitantes como direcciones IP o detalles del navegador.</li>
+      </ul>
+
+      <p><strong><em>6. Sin intercambio con terceros</em></strong></p>
+      <ul>
+        <li>EmoPilot no vende ni comparte información del usuario con terceros. Los datos se utilizan solo para proporcionar funciones de la app y análisis estadístico.</li>
+      </ul>
+
+      <p><strong><em>7. Derechos del usuario</em></strong></p>
+      <ul>
+        <li>EmoPilot no acepta solicitudes directas de eliminación de datos, pero aplica una política de eliminación automática tras el período establecido.</li>
+      </ul>
+
+      <p><strong><em>8. Consentimiento</em></strong></p>
+      <ul>
+        <li>Al tocar "Acepto" y seleccionar "Probar Gratis" o "Suscribirse", se considera que aceptas esta política de privacidad.</li>
+      </ul>
+
+      <p><strong><em>9. Cambios en la política</em></strong></p>
+      <ul>
+        <li>EmoPilot puede modificar esta política conforme a cambios legales o de servicio y notificará dichos cambios en esta página.</li>
+      </ul>
+
+      <hr class="footer-separator" />
+      <footer class="footer">
+        © 2025 EmoPilot. Todos los derechos reservados.<br>
+        Contacto: <a href="mailto:contact@emopilot.app" class="footer-link">contact@emopilot.app</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
