@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>アプリの哲学 – Emopilot</title>
+  <link rel="stylesheet" href="/log/style.css"/>
+</head>
+<body>
+  <div class="container">
+    <!-- ナビゲーションバーの挿入領域 -->
+    <div id="nav-placeholder"></div>
+
+    <!-- 言語切り替え -->
+    <div id="lang-switcher">
+      <a href="/log/en/behind.html">EN</a>
+    </div>
+
+    <!-- 本文 -->
+    <main class="content">
+      <h1 class="center-title">アプリの哲学</h1>
+
+      <div class="center-text">
+        <blockquote style="color: yellow;">
+          「感情に名前をつけて見つめた瞬間、その感情は力を失い始める。」<br>
+          － ダニエル・シーゲル『The Whole-Brain Child』より
+        </blockquote>
+
+        <p>古代から賢者たちは、自分の感情を切り離して見つめる術を知っていました。<br>
+        しかし、現代においても多くの人々が感情に圧倒され、苦しみ、支配されることがあります。</p>
+
+        <p>そのため、人は感情を避けたり抑え込んだりしがちで、それが理性的で正しい方法だと考えます。<br>
+        恐れや外部状況によって感情を表現できないこともあるでしょう。<br>
+        しかし、感情は十分な理由があって生まれるものであり、いつか適切に表現されなければなりません。<br>
+        抑え込まれた感情は身体や認知機能に影響を与え、かえって感情を悪化させる結果となります。</p>
+
+        <p>EmoPilot Logは、単なる感情日記ではありません。自分の感情を見つめるためのツールです。<br>
+        このアプリは、最も安全な空間で自分の感情を見つめ、整理する手助けをしてくれます。</p>
+
+        <p>最初は自分の感情を見つめたり、表現したりするのが難しく感じるかもしれません。<br>
+        EmoPilot Logでは、基本的な感情から繊細で複雑な感情まで、さまざまな項目が用意されています。<br>
+        自分に最も近い感情を、ゆっくりと選んでみてください。</p>
+
+        <p>もし適切な感情が見つからない場合や、自分独自の方法で表現したい場合は、感情項目を追加することも可能です。<br>
+        このアプリを使って、自分の感情を発見し、定義し、自分の言葉で表現してみましょう。</p>
+
+        <p>一つひとつ感情を選びながら、今の状態を見つめ直し、<br>
+        対処法を思い浮かべることで、自分に必要なケアを見つけることができます。<br>
+        <strong>「アドバイスを受ける」</strong>機能を通して、客観的なフィードバックや、感情に向き合う勇気と支援を得ることも可能です。</p>
+
+        <p>すべての記録はあなたのiCloudに安全に保存され、<br>
+        感情と対処法に関する簡易な統計機能は、あなた自身の感情のパターンや変化を振り返る助けとなるでしょう。</p>
+
+        <p>Emopilot Logとともに、感情を記録し、内省する過程を通じて、<br>
+        感情の主人公、ひいては人生の主人公となる旅を歩んでいただければ幸いです。</p>
+      </div>
+
+      <!-- 区切り線とフッター -->
+      <hr class="footer-separator" />
+      <footer class="footer">
+        © 2025 EmoPilot. All rights reserved.<br>
+        お問い合わせ: <a href="mailto:contact@emopilot.app" class="footer-link">contact@emopilot.app</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
