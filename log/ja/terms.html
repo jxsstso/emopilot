@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>利用規約とサブスクリプション情報 – Emopilot</title>
+  <link rel="stylesheet" href="/log/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- ナビゲーションバー挿入領域 -->
+    <div id="nav-placeholder"></div>
+
+    <!-- 言語切り替え -->
+    <div id="lang-switcher">
+      <a href="/log/en/terms.html">EN</a>
+    </div>
+
+    <!-- 本文 -->
+    <main class="content">
+      <h1 class="center-title">利用規約</h1>
+
+      <section>
+        <h2>📌 無料利用のご案内</h2>
+        <ul>
+          <li>アプリを初めてインストールしたユーザーは、24時間無料でご利用いただけます。</li>
+          <li>この期間中、<strong>「アドバイスを受ける」機能は1回まで</strong>使用可能です。</li>
+          <li>無料利用を開始する前に、プライバシーポリシーおよび利用規約に<strong>「同意します」</strong>を選択し、<strong>「無料利用」</strong>ボタンを押してください。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>💳 有料サブスクリプションのご案内</h2>
+        <ul>
+          <li>無料期間中にサブスクリプションを開始するには、「情報を見る」→「サブスクリプション開始」から進んでください。</li>
+          <li>無料期間終了後もアプリを継続利用するには、<strong>月額サブスクリプション</strong>が必要です。</li>
+          <li>プライバシーポリシーおよび利用規約に同意した上で、<strong>「サブスクリプション開始」</strong>ボタンを押して決済を完了すると、購読が開始され、<br>毎月自動で請求されます。</li>
+          <li>サブスクリプションは、アプリ内の<strong>「情報を見る → サブスクリプション解約」</strong>メニューからいつでも解約できます。</li>
+          <li>サブスクユーザーは、<strong>1日最大3回、1ヶ月最大60回</strong>まで「アドバイスを受ける」機能を利用できます。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>⚠️ AIポリシー違反について</h2>
+        <ul>
+          <li>入力内容にAIポリシー違反が含まれている場合、<strong>警告メッセージが表示され、その回数は使用済みとして処理</strong>されます。</li>
+          <li>違反の例：ヘイト表現、脅迫、不快または不適切な言葉など</li>
+          <li>違反が繰り返されると、<strong>追加の警告または一時的な利用制限</strong>が適用される可能性があります。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🚀 サブスクリプション後の再起動のお願い</h2>
+        <ul>
+          <li>サブスクリプションを完了した後は、<strong>アプリを完全に終了してから再起動</strong>してください。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>✅ 同意について</h2>
+        <p>
+          <strong>「同意します」</strong>を選択し、<strong>「無料利用」または「サブスクリプション開始」</strong>ボタンを押した時点で、上記のすべての内容に同意したものとみなされます。
+        </p>
+      </section>
+
+      <!-- 区切り線とフッター -->
+      <hr class="footer-separator" />
+      <footer class="footer">
+        © 2025 EmoPilot. All rights reserved.<br>
+        お問い合わせ: <a href="mailto:contact@emopilot.app" class="footer-link">contact@emopilot.app</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
