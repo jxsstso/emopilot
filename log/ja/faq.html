@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>よくある質問 – Emopilot</title>
+  <link rel="stylesheet" href="/log/style.css"/>
+</head>
+<body>
+  <div class="container">
+    <!-- ナビゲーションバー挿入領域 -->
+    <div id="nav-placeholder"></div>
+
+    <!-- 言語切り替え -->
+    <div id="lang-switcher">
+      <a href="/log/en/faq.html" class="highlight">EN</a>
+    </div>
+
+    <!-- 本文 -->
+    <main class="content">
+      <h1 class="center-title">よくある質問 (FAQ)</h1>
+
+      <div class="centered-container">
+      <div class="faq-item">
+
+      <h3 class="highlight">1. アプリを利用するには何が必要ですか？</h3>
+      <p>EmoPilot Logは記録を安全に保存するため、iCloudを使用します。<br>
+      そのため、iCloudアカウントにログインした状態で、インターネット接続が必要です。<br>
+      感情記録はiCloudアカウントを基準に保存され、別のアカウントでログインするとサブスクリプションが連携されません。</p>
+
+      <h3 class="highlight">2. 無料使用期間はどのくらいで、制限はありますか？</h3>
+      <p>無料使用期間はアプリをインストールしてから24時間です。<br>
+      この期間中、ほとんどの機能を制限なく利用できますが、<br>
+      「アドバイスを受ける」機能は1回のみ使用可能です。</p>
+
+      <h3 class="highlight">3. サブスクリプションをするとどのように使えますか？</h3>
+      <p>感情の記録、編集、統計などの機能は回数制限なく利用できます。<br>
+      AIアドバイス機能は1日最大3回、1ヶ月あたり60回まで利用可能です。</p>
+
+      <h3 class="highlight">4. サブスクリプションの開始・解約・返金はどうすればいいですか？</h3>
+      <p>アプリ内の「情報を見る → サブスクリプション開始」から開始できます。<br>
+      解約や返金は「情報を見る → サブスクリプション解約」から行えます。<br>
+      EmoPilot LogはAppleの購読・返金ポリシーに従っており、詳細はAppleのサポートページをご参照ください。</p>
+
+      <h3 class="highlight">5. 感情や対処法のリストはどのように決められていますか？</h3>
+      <p>感情および対処リストは、医学的基準よりも心理学理論やユーザーの体験をもとに構成されています。<br>
+      このリストは絶対的なものではなく、ユーザーが自由に追加・削除できるよう設計されています。</p>
+
+      <h3 class="highlight">6. アプリはどの言語をサポートしていますか？他の言語も追加されますか？</h3>
+      <p>現在は韓国語と英語に対応しており、今後さらに多くの言語が追加される予定です。<br>
+      新しい言語の追加については公式ホームページでご案内いたします。</p>
+
+      <h3 class="highlight">7. AIはどのようなシステムに基づいていますか？感情や入力内容は保存されますか？</h3>
+      <p><strong>EmoPilot Log</strong>のAIアドバイス機能は、<strong>OpenAIのChatGPT 3.5</strong>モデルを基に動作します。<br>
+      入力内容は暗号化されてサーバーに送信され、<strong>OpenAIのポリシー</strong>に基づき一時的に保存されることがあります。<br>
+      詳細は
+      <a href="https://openai.com/policies/api-data-usage-policies" target="_blank" rel="noopener noreferrer">
+        OpenAIのデータ使用ポリシー
+      </a>
+      をご参照ください。</p>
+
+      <h3 class="highlight">8. AI使用時に禁止されている内容や制限はありますか？</h3>
+      <p>暴力、ヘイト、性的表現など、OpenAIのコンテンツポリシーに反する内容は制限されます。<br>
+      違反が繰り返されると利用制限が適用されることがあります。<br>
+      安全な利用のために、入力内容は内部的にフィルタリング・監視されます。</p>
+
+      <h3 class="highlight">9. なぜユーザー情報は1年間保存されるのですか？</h3>
+      <p>EmoPilot Logは無料体験の繰り返し利用を防ぎ、サブスクリプション状態を確認するため、ユーザー情報を1年間保持します。<br>
+      その後は自動的に削除されます。</p>
+
+      <h3 class="highlight">10. 感情の記録はどこに保存されますか？安全ですか？</h3>
+      <p>感情の記録はユーザーのiCloudに保存され、開発者がアクセスすることはできません。<br>
+      iCloudを通じてデバイス間で同期され、Appleのセキュリティにより保護されます。</p>
+
+      <h3 class="highlight">11. アプリを削除すると記録も消えますか？</h3>
+      <p>アプリを削除しても、記録はiCloudに残ります。<br>
+      同じApple IDで再インストールすれば、以前の記録が復元されます。<br>
+      ただし、iCloudが無効になっている場合や手動でバックアップを行っていない場合は、一部データが復元されない可能性があります。</p>
+
+      </div>
+      </div>
+
+      <!-- 区切り線とフッター -->
+      <hr class="footer-separator" />
+      <footer class="footer">
+        © 2025 EmoPilot. All rights reserved.<br>
+        お問い合わせ: <a href="mailto:contact@emopilot.app" class="footer-link">contact@emopilot.app</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
