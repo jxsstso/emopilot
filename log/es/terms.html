@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guía de Uso y Suscripción – Emopilot</title>
+  <link rel="stylesheet" href="/log/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation Bar Placeholder -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Language Switch -->
+    <div id="lang-switcher">
+      <a href="/log/ko/terms.html">KO</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="content">
+      <h1 class="center-title">Términos de Uso</h1>
+
+      <section>
+        <h2>📌 Prueba Gratuita</h2>
+        <ul>
+          <li>Los nuevos usuarios pueden disfrutar de una prueba gratuita durante 24 horas después de instalar la app.</li>
+          <li>Durante este período, puedes usar la función de <strong>“Consejo”</strong> hasta <strong>1 vez</strong>.</li>
+          <li>Antes de iniciar la prueba gratuita, debes marcar <strong>“Acepto”</strong> y tocar <strong>“Probar Gratis”</strong> 
+              después de revisar la Política de Privacidad y los Términos de Uso.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>💳 Suscripción</h2>
+        <ul>
+          <li>Para iniciar una suscripción durante el período de prueba, ve a ‘Información’ → ‘Suscribirse’.</li>
+          <li>Después de que finalice la prueba gratuita, deberás suscribirte para seguir usando la app.</li>
+          <li>Después de aceptar la Política de Privacidad y los Términos de Uso, tu suscripción comenzará cuando toques <strong>“Suscribirse”</strong> y completes el pago.</li>
+          <li>La suscripción se renovará automáticamente cada mes.</li>
+          <li>Puedes cancelar tu suscripción en cualquier momento desde la app en <strong>‘Información → Cancelar Suscripción’</strong>.</li>
+          <li>Los suscriptores pueden usar la función <strong>“Consejo”</strong> hasta <strong>3 veces al día</strong> y <strong>60 veces al mes</strong>.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>⚠️ Política de Uso de la IA</h2>
+        <ul>
+          <li>Si tu entrada viola las políticas de uso de IA, aparecerá un <strong>mensaje de advertencia</strong> y la sesión igualmente será contada como utilizada.</li>
+          <li>Ejemplos de violaciones: lenguaje ofensivo, amenazas, discurso de odio o contenido inapropiado.</li>
+          <li>Las infracciones repetidas pueden resultar en <strong>advertencias o restricciones temporales</strong>.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🚀 Después de Suscribirse</h2>
+        <ul>
+          <li>Una vez completada tu suscripción, por favor <strong>cierra y vuelve a abrir la app</strong> para actualizar el acceso.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>✅ Aviso de Consentimiento</h2>
+        <p>
+          Al seleccionar <strong>“Acepto”</strong> y tocar <strong>“Probar Gratis”</strong> o <strong>“Suscribirse”</strong>, se considera que has aceptado todos los términos anteriores.
+        </p>
+      </section>
+
+      <!-- Footer -->
+      <hr class="footer-separator" />
+      <footer class="footer">
+        © 2025 EmoPilot. Todos los derechos reservados.<br>
+        Contacto: <a href="mailto:contact@emopilot.app" class="footer-link">contact@emopilot.app</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
