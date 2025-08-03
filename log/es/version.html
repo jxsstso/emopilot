@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Información de la Versión – Emopilot</title>
+  <link rel="stylesheet" href="/log/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation bar placeholder -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Language switcher -->
+    <div id="lang-switcher">
+      <a href="/log/ko/version.html">KO</a>
+    </div>
+
+    <!-- Main content -->
+    <main class="content">
+      <h1 class="center-title">Resumen de Funciones</h1>
+      <h2 class="center-title">Versión 1.0.1</h2>
+
+      <div class="centered-container">
+      <section>
+        <h2>✅ Registro de Emociones</h2>
+        <ul>
+          <li>Selecciona emociones y estrategias de afrontamiento & escribe notas personales</li>
+          <li>Guarda todos los registros de forma segura con iCloud</li>
+          <li>Agrega o elimina elementos para emociones y estrategias detalladas</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🤖 Consejo de IA</h2>
+        <ul>
+          <li>Consejos personalizados según emociones, estrategias y tipo de consejo seleccionados</li>
+          <li>Impulsado por OpenAI GPT-3.5</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🕒 Historial</h2>
+        <ul>
+          <li>Consulta registros recientes por período</li>
+          <li>Busca por rango de fechas personalizado</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>📊 Estadísticas</h2>
+        <ul>
+          <li>Gráfico de tendencias emocionales a lo largo del tiempo</li>
+          <li>Clasificación de emociones principales, emociones detalladas y estrategias de afrontamiento</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>⚙️ Configuración</h2>
+        <ul>
+          <li>Idioma: Inglés / Coreano</li>
+          <li>Personalización del tamaño de fuente y del tema</li>
+          <li>Bloqueo de pantalla y configuración de contraseña</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>❓ Ayuda Rápida</h2>
+        <ul>
+          <li>Toca el ícono de ayuda en cada pantalla para ver la guía de uso</li>
+          <li>La guía se muestra como una hoja deslizante para facilitar su lectura</li>
+        </ul>
+      </section>
+      </div>
+
+      <hr class="footer-separator" />
+      <footer class="footer">
+        © 2025 EmoPilot. Todos los derechos reservados.<br>
+        Contacto: <a href="mailto:contact@emopilot.app" class="footer-link">contact@emopilot.app</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
