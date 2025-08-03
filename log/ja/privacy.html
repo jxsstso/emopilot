@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>プライバシーポリシー – Emopilot</title>
+  <link rel="stylesheet" href="/log/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- ナビゲーションバー挿入領域 -->
+    <div id="nav-placeholder"></div>
+
+    <!-- 言語切り替え -->
+    <div id="lang-switcher">
+      <a href="/log/en/privacy.html">EN</a>
+    </div>
+
+    <!-- 本文 -->
+    <main class="content">
+      <h1 class="center-title">プライバシーポリシー</h1>
+
+      <p><strong><em>1. 収集および利用目的</em></strong></p>
+      <ul>
+        <li>EmoPilot Logは、ユーザー認証および利用履歴確認のため、各ユーザーのCloudKit IDをサーバーに保存します。</li>
+        <li>システム統計と分析のため、ユーザーのIPアドレスから国情報のみを抽出してデータベースに保存します。ただし、IPアドレス自体は保存しません。</li>
+        <li>ユーザー情報は無料体験中も保存され、サブスクリプション開始後も同様に使用されます。</li>
+        <li>無料体験後にサブスクリプションを開始しない場合や解約した場合でも、情報は1年間保管されます。</li>
+      </ul>
+
+      <p><strong><em>2. ユーザーデータの保管および濫用防止</em></strong></p>
+      <ul>
+        <li>無料利用の繰り返しによる濫用を防止するため、CloudKit IDを最大1年間保存します。</li>
+        <li>この情報は利用制限の判断にのみ使用され、その他の目的や第三者への提供は行いません。</li>
+      </ul>
+
+      <p><strong><em>3. 「アドバイスを受ける」機能のデータ処理方式</em></strong></p>
+      <ul>
+        <li>「アドバイスを受ける」機能を利用する際、選択した感情状態および入力内容がOpenAIサーバーに送信されます。</li>
+        <li>入力内容はOpenAIのAPIを通じて処理され、OpenAIのポリシーに基づき最大30日間一時的に保存される場合があります。<br>ただし、AIモデルの学習には使用されません。</li>
+        <li>このデータはアドバイス生成のためのみに使用され、EmoPilotのサーバーには保存されず、他の目的にも使用されません。</li>
+      </ul>
+
+      <p><strong><em>4. データの安全対策</em></strong></p>
+      <ul>
+        <li>すべての記録はユーザーのiCloudに保存され、Appleのセキュリティシステムに従って保護されます。</li>
+        <li>EmoPilot Logは、暗号化やアクセス制限などの技術的対策により、ユーザー情報を保護します。</li>
+      </ul>
+
+      <p><strong><em>5. クッキーおよびログ</em></strong></p>
+      <ul>
+        <li>当ウェブサイトでは、クッキーの使用やIPアドレス・ブラウザ情報の収集は行っていません。</li>
+      </ul>
+
+      <p><strong><em>6. 第三者への提供なし</em></strong></p>
+      <ul>
+        <li>EmoPilotは、ユーザー情報を第三者に販売・提供せず、アプリの機能提供および統計分析の目的以外には使用しません。</li>
+      </ul>
+
+      <p><strong><em>7. 利用者の権利</em></strong></p>
+      <ul>
+        <li>EmoPilotは、ユーザーからの情報削除リクエストを直接受け付けていませんが、一定期間後に自動削除される方針を採用しています。</li>
+      </ul>
+
+      <p><strong><em>8. 同意</em></strong></p>
+      <ul>
+        <li>「同意します」を選択して「無料使用」または「サブスクリプションを開始」を押すことで、本プライバシーポリシーに同意したとみなされます。</li>
+      </ul>
+
+      <p><strong><em>9. ポリシーの変更</em></strong></p>
+      <ul>
+        <li>法令やサービス変更により、本ポリシーは変更される場合があります。変更時には本ページにて告知いたします。</li>
+      </ul>
+
+      <!-- 区切り線とフッター -->
+      <hr class="footer-separator" />
+      <footer class="footer">
+        © 2025 EmoPilot. All rights reserved.<br>
+        お問い合わせ: <a href="mailto:contact@emopilot.app" class="footer-link">contact@emopilot.app</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
