@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>バージョン情報 – Emopilot</title>
+  <link rel="stylesheet" href="/log/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- ナビゲーションバー挿入領域 -->
+    <div id="nav-placeholder"></div>
+
+    <!-- 言語切り替え -->
+    <div id="lang-switcher">
+      <a href="/log/en/version.html">EN</a>
+    </div>
+
+    <!-- 本文 -->
+    <main class="content">
+      <h1 class="center-title">機能紹介</h1>
+      <h2 class="center-title">バージョン 1.0.1</h2>
+
+      <div class="centered-container">
+        <section>
+          <h2>✅ 感情の記録</h2>
+          <ul>
+            <li>感情と対処法の選択 & メモの記録</li>
+            <li>iCloudに安全にデータ保存</li>
+            <li>詳細な感情・対処法の追加／削除</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>🤖 AIアドバイス</h2>
+          <ul>
+            <li>選択した感情・対処法・アドバイスタイプに応じたカスタマイズされたアドバイスを提供</li>
+            <li>OpenAI GPT-3.5 を使用</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>🕒 記録の確認</h2>
+          <ul>
+            <li>期間別の最新記録を表示</li>
+            <li>日付を指定して検索可能</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>📊 統計</h2>
+          <ul>
+            <li>期間別の感情変化グラフ</li>
+            <li>主要な感情・詳細な感情・対処法のランキング</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>⚙️ 設定</h2>
+          <ul>
+            <li>言語設定：英語 / 韓国語</li>
+            <li>フォントサイズとテーマの調整</li>
+            <li>ロック画面とパスワードの設定</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>❓ クイックヘルプ</h2>
+          <ul>
+            <li>各画面のヘルプアイコンをタップして簡単な使い方を確認</li>
+            <li>ヘルプは画面下部からスライドで表示されるボトムシート形式です</li>
+          </ul>
+        </section>
+      </div>
+
+      <hr class="footer-separator" />
+      <footer class="footer">
+        © 2025 EmoPilot. All rights reserved.<br>
+        お問い合わせ: <a href="mailto:contact@emopilot.app" class="footer-link">contact@emopilot.app</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
