@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preguntas Frecuentes – Emopilot</title>
+  <link rel="stylesheet" href="/log/style.css"/>
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation Bar Placeholder -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Language Switch -->
+    <div id="lang-switcher">
+      <a href="/log/ko/faq.html" class="highlight">KO</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="content">
+      <h1 class="center-title">Preguntas Frecuentes (FAQ)</h1>
+
+      <div class="centered-container">
+      <div class="faq-item">        
+      <h3 class="highlight">1. ¿Qué necesito para usar la app después de instalarla?</h3>
+      <p>EmoPilot Log utiliza iCloud para guardar de forma segura tus registros emocionales.<br>
+      Por lo tanto, debes haber iniciado sesión en tu cuenta de iCloud y contar con conexión a internet para la autenticación con el servidor.<br>
+      Los datos se guardan según tu cuenta de iCloud. Si inicias sesión con una cuenta distinta, la suscripción no estará vinculada.</p>
+
+      <h3 class="highlight">2. ¿Cuánto dura el período de prueba gratuita y hay alguna limitación?</h3>
+      <p>La prueba gratuita dura 24 horas después de instalar la app.<br>
+      Durante ese tiempo, la mayoría de las funciones están disponibles sin restricciones,<br>
+      pero la función de <strong>“Consejo”</strong> está limitada a un solo uso.</p>
+
+      <h3 class="highlight">3. Si me suscribo, ¿cuántas veces puedo usar la app y los consejos de IA?</h3>
+      <p>Todas las funciones como registrar emociones, editar y ver estadísticas están disponibles sin límite de uso.<br>
+      La función de consejo por IA permite hasta 3 usos por día, con un máximo mensual de 60 usos.</p>
+
+      <h3 class="highlight">4. ¿Cómo puedo iniciar o cancelar mi suscripción o pedir un reembolso?</h3>
+      <p>Puedes iniciar tu suscripción desde “Información → Suscribirse” en la app.<br>
+      También puedes cancelarla o solicitar un reembolso desde “Información → Cancelar Suscripción”.<br>
+      EmoPilot Log sigue las políticas de suscripción y reembolso de Apple. Consulta el sitio de soporte de Apple para más detalles.</p>
+
+      <h3 class="highlight">5. ¿Cómo se crearon las listas de emociones y estrategias de afrontamiento?</h3>
+      <p>Las listas de emociones y afrontamiento en EmoPilot Log se basan en teorías psicológicas y experiencias reales de usuarios,<br>
+      no en criterios médicos estrictos. Estas listas no son definitivas, sino herramientas para ayudarte a explorar tus sentimientos<br>
+      y crear tus propias listas personalizadas. Puedes agregar o eliminar elementos libremente.</p>
+
+      <h3 class="highlight">6. ¿Qué idiomas admite la app? ¿Se agregarán más?</h3>
+      <p>Actualmente están disponibles el inglés y el coreano, y se planea agregar más idiomas en el futuro.<br>
+      Las actualizaciones se anunciarán en el sitio oficial.</p>
+
+      <h3 class="highlight">7. ¿Qué sistema de IA se usa? ¿Se guardan mis emociones o texto?</h3>      
+      <p>La función de consejos en <strong>EmoPilot Log</strong> funciona con el modelo <strong>ChatGPT 3.5 de OpenAI</strong>.<br>
+      Tu entrada se transmite cifrada al servidor y, <strong>según la política de OpenAI</strong>, 
+      puede almacenarse temporalmente para generar una respuesta.<br>
+      Para más información, consulta la  
+      <a href="https://openai.com/policies/api-data-usage-policies" target="_blank" rel="noopener noreferrer">
+        Política de Uso de Datos de API de OpenAI
+      </a>.
+      </p>
+
+      <h3 class="highlight">8. ¿Hay contenido restringido o prohibido al usar la IA?</h3>
+      <p>No se permite el ingreso de contenido violento, de odio o sexual explícito según las políticas de contenido de OpenAI.<br>
+      Repetidas infracciones pueden resultar en limitaciones de uso.<br>
+      Para mayor seguridad, todas las entradas son filtradas y monitoreadas internamente.</p>
+
+      <h3 class="highlight">9. ¿Por qué se guarda la información del usuario durante un año?</h3>
+      <p>Para evitar abusos de la prueba gratuita y verificar el estado de suscripción, EmoPilot Log conserva los datos del usuario durante un año tras cancelar la suscripción. Después de ese tiempo, los datos se eliminan automáticamente.</p>
+
+      <h3 class="highlight">10. ¿Dónde se guardan mis registros emocionales? ¿Están seguros?</h3>
+      <p>Tus registros se guardan en tu cuenta personal de iCloud, y el desarrollador no tiene acceso a ellos.<br>
+      iCloud permite la sincronización entre dispositivos y la seguridad está garantizada por Apple.</p>
+
+      <h3 class="highlight">11. ¿Se eliminan mis registros si desinstalo la app?</h3>
+      <p>Tus datos permanecerán en iCloud incluso si eliminas la app.<br>
+      Al reinstalarla e iniciar sesión con el mismo Apple ID, tus registros se restaurarán.<br>
+      Sin embargo, si iCloud estaba desactivado o no hiciste copia de seguridad manual, es posible que se pierda parte de la información.</p>
+      </div>
+      </div>
+        
+      <!-- Footer -->
+      <hr class="footer-separator" />
+      <footer class="footer">
+        © 2025 EmoPilot. Todos los derechos reservados.<br>
+        Contacto: <a href="mailto:contact@emopilot.app" class="footer-link">contact@emopilot.app</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
