@@ -9,9 +9,11 @@
       const lang = navigator.language || navigator.userLanguage;
       if (lang.startsWith("ko")) {
         window.location.replace("/log/ko/index.html");
-      if (lang.startsWith("ja")) {
+      }
+      else if (lang.startsWith("ja")) {
         window.location.replace("/log/ja/index.html");
-      if (lang.startsWith("es")) {
+      }
+      else if (lang.startsWith("es")) {
         window.location.replace("/log/es/index.html");
       } else {
         window.location.replace("/log/en/index.html");
