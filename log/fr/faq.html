@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foire aux questions – Emopilot</title>
+  <link rel="stylesheet" href="/log/style.css"/>
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation Bar Placeholder -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="content">
+      <h1 class="center-title">Foire aux questions (FAQ)</h1>
+
+      <div class="centered-container">
+      <div class="faq-item">        
+
+      <h3 class="highlight">1. Que dois-je faire pour utiliser l’app après l’installation ?</h3>
+      <p>EmoPilot Log utilise iCloud pour stocker vos enregistrements émotionnels de manière sécurisée.<br>
+      Vous devez donc être connecté à votre compte iCloud et disposer d’une connexion Internet active pour l’authentification serveur.<br>
+      Les données sont liées à votre compte iCloud. Si vous vous connectez avec un autre compte iCloud, votre abonnement ne sera pas associé.</p>
+
+      <h3 class="highlight">2. Combien de temps dure l’essai gratuit et y a-t-il des limites de fonctionnalités ?</h3>
+      <p>L’essai gratuit dure 24 heures après l’installation de l’app.<br>
+      Pendant cette période, la plupart des fonctionnalités sont disponibles sans restriction,<br>
+      mais la fonction « Conseil » est limitée à une seule utilisation.</p>
+
+      <h3 class="highlight">3. Si je m’abonne, combien de fois puis-je utiliser l’app et les conseils IA ?</h3>
+      <p>Toutes les fonctionnalités (journal des émotions, modification, statistiques) sont disponibles sans limite.<br>
+      La fonction de conseil IA permet jusqu’à 3 utilisations par jour, avec un maximum de 60 utilisations par mois.</p>
+
+      <h3 class="highlight">4. Comment puis-je commencer, annuler mon abonnement ou demander un remboursement ?</h3>
+      <p>Vous pouvez démarrer votre abonnement depuis « Informations → S’abonner » dans l’app.<br>
+      Vous pouvez également annuler ou demander un remboursement depuis « Informations → Annuler l’abonnement ».<br>
+      EmoPilot Log suit les règles d’Apple concernant les abonnements et remboursements. Veuillez consulter la page d’assistance Apple pour les étapes détaillées.</p>
+
+      <h3 class="highlight">5. Comment ont été créées les listes d’émotions et de stratégies ?</h3>
+      <p>Les listes d’EmoPilot Log sont basées sur des théories psychologiques et sur des expériences réelles d’utilisateurs, plutôt que sur des critères médicaux stricts.<br>
+      Ces listes ne sont pas définitives : elles sont conçues pour aider les utilisateurs à explorer leurs émotions et créer leurs propres listes personnalisées.<br>
+      Vous pouvez librement ajouter ou supprimer des éléments.</p>
+
+      <h3 class="highlight">6. Quelles langues l’app prend-elle en charge ? Y en aura-t-il d’autres ?</h3>
+      <p>Actuellement : anglais, espagnol, coréen et japonais. Le support linguistique pourra être élargi selon les besoins du marché.<br>
+      Les mises à jour sur les langues prises en charge seront partagées via le site officiel.</p>
+
+      <h3 class="highlight">7. Quel système utilise l’IA ? Mes émotions ou textes sont-ils stockés ?</h3>      
+      <p>
+      La fonction de conseil IA dans <strong>EmoPilot Log</strong> est propulsée par le modèle <strong>ChatGPT 4.0 d’OpenAI</strong>.<br>
+      Les saisies des utilisateurs sont chiffrées et transmises au serveur et, 
+      <strong>conformément à la politique d’OpenAI</strong>, elles peuvent être temporairement stockées sur leurs serveurs pour générer des réponses.<br>
+      Pour plus de détails, veuillez consulter 
+      <a href="https://openai.com/policies/api-data-usage-policies" target="_blank" rel="noopener noreferrer">
+        la politique d’utilisation des données API d’OpenAI
+      </a>.
+      </p>
+
+      <h3 class="highlight">8. Y a-t-il des restrictions ou du contenu interdit lors de l’utilisation de l’IA ?</h3>
+      <p>Les saisies contenant de la violence, des propos haineux ou du contenu sexuellement explicite — en violation des politiques d’OpenAI — sont interdites.<br>
+      Des violations répétées peuvent entraîner des limitations d’utilisation.<br>
+      Pour garantir une utilisation sûre, les saisies IA sont filtrées et contrôlées en interne.</p>
+
+      <h3 class="highlight">9. Pourquoi les informations des utilisateurs sont-elles conservées pendant un an ?</h3>
+      <p>Pour éviter les essais gratuits répétés et vérifier l’état de l’abonnement, EmoPilot Log conserve les données pendant un an après la résiliation,<br>
+      puis elles sont automatiquement supprimées.</p>
+
+      <h3 class="highlight">10. Où mes enregistrements d’émotions sont-ils stockés ? Sont-ils sécurisés ?</h3>
+      <p>Vos enregistrements sont sauvegardés dans votre iCloud personnel, et le développeur n’y a pas accès.<br>
+      iCloud permet également la synchronisation entre appareils, et vos données sont protégées par les systèmes de sécurité d’Apple.</p>
+
+      <h3 class="highlight">11. Mes enregistrements seront-ils supprimés si je désinstalle l’app ?</h3>
+      <p>Vos enregistrements restent dans iCloud même si l’app est supprimée.<br>
+      En réinstallant et en vous connectant avec le même identifiant Apple, vos anciens enregistrements seront restaurés.<br>
+      Toutefois, si iCloud était désactivé ou si vous n’aviez pas effectué de sauvegarde manuelle avant la suppression, certaines données peuvent ne pas être récupérables.</p>
+      </div>
+      </div>
+        
+      <!-- Footer -->
+      <hr class="footer-separator" />
+      <footer class="footer">
+        © 2025 EmoPilot. Tous droits réservés.<br>
+        Contact : <a href="mailto:contact@emopilot.app" class="footer-link">contact@emopilot.app</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
