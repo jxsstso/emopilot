@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Derrière cette application – EmoPilot</title>
+  <link rel="stylesheet" href="/log/style.css"/>
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation Bar Placeholder -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="content">
+      <h1 class="center-title">Derrière cette application</h1>
+
+      <div class="center-text">
+      <blockquote style="color: yellow;">
+        « Au moment où vous nommez votre émotion et l’observez, elle commence à perdre de son pouvoir. »<br>
+        — Inspiré par Daniel J. Siegel, <em>The Whole-Brain Child</em>
+      </blockquote>
+
+      <p>Depuis l’Antiquité, les sages ont appris à se détacher de leurs émotions et à les observer.
+      Pourtant, dans la vie moderne, beaucoup d’entre nous se sentent encore submergés, voire prisonniers de leurs émotions.</p>
+
+      <p>Les gens évitent ou refoulent souvent leurs émotions, pensant que c’est la chose rationnelle et correcte à faire.<br>
+      Cela peut être parce qu’ils ont peur de les affronter, ou parce que des circonstances extérieures rendent difficile leur expression.<br>
+      Cependant, les émotions surgissent pour des raisons valables et doivent être exprimées de manière appropriée.<br>
+      Lorsqu’elles sont réprimées, elles peuvent affecter la santé physique et le fonctionnement cognitif,
+      ce qui finit par détériorer le bien-être émotionnel.</p>
+
+      <p>EmoPilot Log est bien plus qu’un simple journal d’humeur.
+      C’est un outil conçu pour vous aider à observer vos émotions avec clarté et sécurité.<br>
+      Cette application offre un espace sûr où vous pouvez réfléchir à vos émotions, à votre rythme.</p>
+      
+      <p>Au début, il peut sembler inhabituel ou même difficile d’observer vos émotions ou de les mettre en mots.<br>
+      Pour vous aider à commencer, EmoPilot Log propose une gamme d’émotions — des plus simples et basiques aux plus subtiles et nuancées.<br>
+      Prenez le temps de les parcourir et choisissez celles qui se rapprochent le plus de ce que vous ressentez maintenant.<br>
+      Si vous ne trouvez pas d’étiquette qui vous correspond, ou si vous souhaitez décrire vos sentiments avec vos propres mots,  
+      vous pouvez toujours ajouter vos propres émotions personnalisées.</p>
+
+      <p>Cet espace est le vôtre — un lieu où vous pouvez explorer, définir et exprimer en douceur ce que vous traversez,  
+      de la manière qui vous semble la plus authentique.<br> 
+      En choisissant vos émotions une par une, vous pouvez regarder de plus près ce que vous ressentez.<br>
+      En réfléchissant aux moyens d’y faire face, l’application vous aide à explorer le type de soutien dont vous pourriez avoir besoin.<br>
+      La fonction <strong>« Conseil »</strong> de l’app peut offrir une orientation douce ou un encouragement, 
+      vous aidant à voir vos émotions de façon plus objective et à vous sentir soutenu.</p>
+
+      <p>Tous vos enregistrements sont sauvegardés en toute sécurité dans votre iCloud,
+      et vous pourrez consulter des statistiques simples sur vos émotions et vos stratégies d’adaptation.<br>
+      De cette façon, vous pouvez progressivement développer une meilleure compréhension de vous-même et une conscience accrue au fil du temps.</p>
+
+      <p>En continuant d’utiliser cette application,
+      nous espérons que vous deviendrez celui qui guide vos émotions — et votre vie.</p>
+      </div>
+
+      <!-- Footer -->
+      <hr class="footer-separator" />
+      <footer class="footer">
+        © 2025 EmoPilot. Tous droits réservés.<br>
+        Contact : <a href="mailto:contact@emopilot.app" class="footer-link">contact@emopilot.app</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
