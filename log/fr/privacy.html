@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politique de confidentialité – Emopilot</title>
+  <link rel="stylesheet" href="/log/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div id="nav-placeholder"></div>
+
+    <main class="content">
+      <h1 class="center-title">Politique de confidentialité</h1>
+
+      <p><strong><em>1. Objectif de la collecte et de l’utilisation des données</em></strong></p>
+      <ul>
+        <li>EmoPilot Log enregistre l’ID CloudKit de chaque utilisateur sur son serveur pour l’authentification et le suivi de l’utilisation.</li>
+        <li>EmoPilot Log collecte et stocke les codes pays fournis par les utilisateurs à des fins de statistiques et d’analyses. 
+          Il reçoit également des informations de fuseau horaire pour le traitement des dates et heures, qui ne sont pas stockées.</li>
+        <li>Les informations utilisateur sont sauvegardées pendant la période d’essai gratuit et restent identiques après le début d’un abonnement.</li>
+        <li>Ces informations sont conservées pendant un an même si l’utilisateur ne s’abonne pas ou annule son abonnement.</li>
+      </ul>
+
+      <p><strong><em>2. Conservation des données et prévention des abus</em></strong></p>
+      <ul>
+        <li>Pour éviter les abus répétés de l’essai gratuit, EmoPilot Log conserve les ID CloudKit pendant un an maximum.</li>
+        <li>Ces données sont utilisées uniquement pour déterminer les restrictions d’utilisation et ne seront utilisées à aucune autre fin ni partagées à l’extérieur.</li>
+      </ul>
+
+      <p><strong><em>3. Traitement des données lors de l’utilisation de la fonction « Conseil »</em></strong></p>
+      <ul>
+        <li>Lors de l’utilisation de la fonction « Conseil », l’état émotionnel sélectionné et toute saisie sont transmis au serveur d’OpenAI.</li>
+        <li>Les saisies utilisateur sont traitées via l’API d’OpenAI et peuvent être temporairement conservées jusqu’à 30 jours sur leurs serveurs à des fins de surveillance des abus, conformément à la politique d’utilisation des données d’OpenAI.
+          Toutefois, ces données ne sont pas utilisées pour entraîner ou améliorer les modèles d’IA.</li>
+        <li>Ces données servent uniquement à générer des conseils et ne sont pas stockées sur le serveur d’EmoPilot, ni utilisées à d’autres fins.</li>
+      </ul>
+
+      <p><strong><em>4. Mesures de sécurité des données</em></strong></p>
+      <ul>
+        <li>Tous les enregistrements sont stockés dans l’iCloud personnel de l’utilisateur et suivent les protocoles de sécurité d’Apple.</li>
+        <li>EmoPilot Log utilise le chiffrement et des contrôles d’accès pour protéger les données des utilisateurs.</li>
+      </ul>
+
+      <p><strong><em>5. Cookies et journaux</em></strong></p>
+      <ul>
+        <li>Ce site web n’utilise pas de cookies et ne collecte aucune information sur les visiteurs (adresses IP ou détails du navigateur).</li>
+      </ul>
+
+      <p><strong><em>6. Absence de partage avec des tiers</em></strong></p>
+      <ul>
+        <li>EmoPilot ne vend ni ne partage les informations utilisateur avec des tiers. Les données sont utilisées uniquement pour fournir les fonctionnalités de l’app et pour des analyses statistiques.</li>
+      </ul>
+
+      <p><strong><em>7. Droits des utilisateurs</em></strong></p>
+      <ul>
+        <li>EmoPilot n’accepte pas de demandes directes de suppression de données, mais applique une politique de suppression automatique après une période définie.</li>
+      </ul>
+
+      <p><strong><em>8. Consentement</em></strong></p>
+      <ul>
+        <li>En appuyant sur « J’accepte » et en sélectionnant « Essai gratuit » ou « S’abonner », vous êtes réputé avoir accepté la présente politique de confidentialité.</li>
+      </ul>
+
+      <p><strong><em>9. Modifications de la politique</em></strong></p>
+      <ul>
+        <li>EmoPilot peut réviser cette politique en fonction des changements légaux ou de service et informera les utilisateurs de ces changements sur cette page.</li>
+      </ul>
+
+      <hr class="footer-separator" />
+      <footer class="footer">
+        © 2025 EmoPilot. Tous droits réservés.<br>
+        Contact : <a href="mailto:contact@emopilot.app" class="footer-link">contact@emopilot.app</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
